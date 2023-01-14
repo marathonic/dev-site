@@ -1,5 +1,5 @@
 import React from "react";
-import songoku from "../assets/GokuTransparentBg.jpg";
+import songoku from "../assets/GokuBgTransparentBg2.png";
 
 // const Goku = new Image();
 // Goku.src = "test-folder/GokuTransparentBg.jpg";
@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <main className="splash">
       <div className="hero">
-        <h1 className="hero-h1">Hello</h1>
+        <h1 className="hero-h1">Hero</h1>
         <img src={songoku} alt="" className="goku-hero" />
         {/* {`${Goku}`} */}
         {/* <img
