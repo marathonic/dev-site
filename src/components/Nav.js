@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 
-export const Nav = ({ isDesktop }) => {
+export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
   return (
     <nav className="nav">
       {isDesktop && (
@@ -12,7 +12,10 @@ export const Nav = ({ isDesktop }) => {
         </ul>
       )}
       {!isDesktop && (
-        <button className="menu-btn">
+        <button
+          className="menu-btn"
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        >
           <AiOutlineMenu style={{ pointerEvents: "none" }} />
         </button>
       )}
