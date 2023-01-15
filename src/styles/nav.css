@@ -1,0 +1,35 @@
+.nav {
+  background-color: antiquewhite;
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  color: white;
+  color: #e3e3e3;
+  font-size: 1.2rem;
+  padding-block: clamp(30px, 20px, 42px);
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-li {
+  cursor: pointer;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  padding-right: 16px;
+  font-size: clamp(26px, 32px, 42px);
+  /* float: right; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+}

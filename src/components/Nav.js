@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import "../styles/nav.css";
 
 export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
   return (
