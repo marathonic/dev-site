@@ -1,6 +1,6 @@
 .sidebar {
   background-color: rgba(245, 246, 219, 0.9);
-  color: black;
+  /* color: black; */
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -33,11 +33,20 @@
   list-style: none;
   font-size: 1.6rem;
   text-align: end;
+  margin-right: 20px;
 }
 
 .sidebar-li {
   margin-bottom: 1.4rem;
+  transition: all 0.5s;
   /* margin-right: 30px; */
+}
+
+.sidebar-li:hover {
+  background-color: #454138;
+  color: #dcd8c0;
+  box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1;
+  padding-right: 10px;
 }
 
 .sidebar-contact {
@@ -48,26 +57,44 @@
   margin-top: 50%;
 }
 
+.sidebar-li.current-link,
+.sidebar-contact {
+  border-top: solid #c8c2aa 2px;
+  border-bottom: solid #c8c2aa 2px;
+
+  background-color: #dcd8c0;
+  color: #454138;
+}
+
 .sb-contact-box {
   width: 100%;
   text-align: center;
-  border-left: dashed 1px var(--customColor);
-  border-right: dashed 1px var(--customColor);
-
+  background-color: rgba(200, 194, 170, 0.2);
   background-size: 4px 4px;
-  background-image: linear-gradient(
-      90deg,
-      transparent,
-      transparent 3px,
-      rgba(0, 0, 0, 0.07) 4px
-    ),
-    linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px);
+  box-shadow: 0;
+  transition: all 0.3s;
+  /* background-image: linear-gradient( */
+  /* 90deg, */
+  /* transparent, */
+  /* transparent 3px, */
+  /* rgba(0, 0, 0, 0.07) 4px */
+  /* ), */
+  /* linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px); */
+}
+
+.sb-contact-box:active {
+  background-color: var(--customColor);
+  color: white;
+  box-shadow: 3px 2px 1px 0 #bab5a1;
+}
+
+.sb-contact-box:first-of-type {
+  border-right: solid 2px #c8c2aa;
 }
 
 .current-link {
   /* background: #c8c2aa; */
-  border-top: solid #c8c2aa 2px;
-  border-bottom: solid #c8c2aa 2px;
+
   /* background-image: linear-gradient( */
   /* 90deg, */
   /* rgba(#4d493e, 0.2), */

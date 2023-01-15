@@ -27,6 +27,7 @@
   background-color: transparent;
   border: transparent;
   color: var(--customColor);
+  color: white;
   padding-right: 16px;
   font-size: clamp(26px, 32px, 42px);
   /* float: right; */
