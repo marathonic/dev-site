@@ -37,8 +37,25 @@ body {
   );
 
   background: #c8c2aa;
-  box-shadow: inset 0 0 150px rgba(var(--customColor), 0.4),
-    inset 0 0 150px rgba(var(--customColor), 0.3);
+  /* test */
+  /* */
+  background-color: #c8c2aa;
+  background-size: 4px 4px;
+  background-image: linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.07) 4px
+    ),
+    linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px);
+  /* box-shadow: inset 0 0 150px var(--customColor), 0.4, */
+  /* inset 0 0 150px var(--customColor), 0.3; */
+  /* test */
+}
+
+h1 {
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0 #bab5a1;
 }
 
 .splash {
@@ -57,8 +74,9 @@ body {
 
 .hero-h1 {
   color: #f95959;
+  color: var(--customColor);
   font-size: 9rem;
-  font-weight: bold;
+  font-weight: lighter;
 }
 
 @font-face {

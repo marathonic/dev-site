@@ -2,6 +2,8 @@
   background-color: antiquewhite;
   background: transparent;
   background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(77, 73, 62, 0.2);
+  /* background-color: var(--customColor); */
 
   color: white;
   color: #e3e3e3;
@@ -24,7 +26,7 @@
 .menu-btn {
   background-color: transparent;
   border: transparent;
-  color: white;
+  color: var(--customColor);
   padding-right: 16px;
   font-size: clamp(26px, 32px, 42px);
   /* float: right; */
