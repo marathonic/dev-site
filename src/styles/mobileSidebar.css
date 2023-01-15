@@ -1,7 +1,8 @@
 .sidebar {
   background-color: rgba(245, 246, 219, 0.9);
   /* color: black; */
-  display: flex;
+
+  /* display: block; */
   flex-direction: column;
   align-items: baseline;
   justify-content: space-around;
@@ -9,10 +10,28 @@
   height: 100%;
   width: 100%;
   max-height: 100%;
+  visibility: visible;
+  /* transition: all 1s; */
+}
+
+.hide-sb {
+  visibility: hidden;
+  width: 0;
+  opacity: 0;
+}
+
+.sb-closed {
+  display: none;
+  width: 0;
+  transition: all 1s;
+}
+
+.sb-open {
+  display: block;
+  width: 100%;
 }
 
 .sidebar-container {
-  transition: all 1s ease-in-out;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -22,6 +41,10 @@
 
 .fade-in {
   animation: fadeIn 1s;
+}
+
+.fade-out {
+  animation: fadeOut 2s;
 }
 
 .sidebar-ul {
@@ -114,5 +137,14 @@
 
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

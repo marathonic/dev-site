@@ -6,8 +6,12 @@ export const MobileSidebar = ({ isSidebarOpen }) => {
   return (
     <>
       {isSidebarOpen && (
-        <div className="sidebar">
-          <div className="sidebar-container fade-in">
+        <div
+          className={`${
+            isSidebarOpen ? "sidebar fade-in" : "sidebar hide-sb fade-out"
+          }`}
+        >
+          <div className="sidebar-container">
             <ul className="sidebar-ul">
               <li className="sidebar-li current-link">Home</li>
               <li className="sidebar-li">Projects</li>
