@@ -3,6 +3,18 @@ import { AiOutlineMenu } from "react-icons/ai";
 import "../styles/nav.css";
 
 export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
+  const handleSidebarToggle = () => {
+    const sidebarContainer = document.querySelector(".sidebar-container");
+    if (isSidebarOpen && !sidebarContainer?.classList.contains("fade-out")) {
+      sidebarContainer?.classList.add("fade-out");
+      setTimeout(() => {
+        setIsSidebarOpen(!isSidebarOpen);
+      }, 700);
+      return;
+    }
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <nav className="nav">
       {isDesktop && (
@@ -13,10 +25,7 @@ export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
         </ul>
       )}
       {!isDesktop && (
-        <button
-          className="menu-btn"
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        >
+        <button className="menu-btn" onClick={handleSidebarToggle}>
           <AiOutlineMenu style={{ pointerEvents: "none" }} />
         </button>
       )}

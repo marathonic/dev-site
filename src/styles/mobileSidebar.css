@@ -24,6 +24,11 @@
   animation: fadeIn 1s;
 }
 
+.fade-out {
+  animation: fadeOut 1s;
+  /* animation-fill-mode: forwards; */
+}
+
 .sidebar-ul {
   /* position: absolute;
   right: 0;
@@ -114,5 +119,14 @@
 
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

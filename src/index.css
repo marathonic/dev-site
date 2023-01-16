@@ -75,7 +75,7 @@ h1 {
 .hero-h1 {
   color: #f95959;
   color: var(--customColor);
-  font-size: 9rem;
+  font-size: 8rem;
   font-weight: lighter;
 }
 
