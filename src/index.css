@@ -70,6 +70,8 @@ h1 {
 
 .goku-hero {
   max-width: 300px;
+  padding-bottom: 42%;
+  border-bottom: solid 2px white;
 }
 
 .hero-h1 {
@@ -77,6 +79,13 @@ h1 {
   color: var(--customColor);
   font-size: 8rem;
   font-weight: lighter;
+}
+
+.h1-categ {
+  text-shadow: 0.3rem 0.3rem 0 #bab5a1;
+  color: #f95959;
+  color: var(--customColor);
+  font-size: 20vw;
 }
 
 @font-face {

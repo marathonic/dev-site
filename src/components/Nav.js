@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import "../styles/nav.css";
+import { MobileBurgerIcon } from "./MobileBurgerIcon";
 
 export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
   const handleSidebarToggle = () => {
@@ -26,7 +27,8 @@ export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
       )}
       {!isDesktop && (
         <button className="menu-btn" onClick={handleSidebarToggle}>
-          <AiOutlineMenu style={{ pointerEvents: "none" }} />
+          {/* <AiOutlineMenu style={{ pointerEvents: "none" }} /> */}
+          <MobileBurgerIcon isSidebarOpen={isSidebarOpen} />
         </button>
       )}
     </nav>

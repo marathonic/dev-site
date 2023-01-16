@@ -1,3 +1,15 @@
 .projects-container {
   margin-top: auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.h1-projects {
+  text-shadow: 0.3rem 0.3rem 0 #bab5a1;
+  color: #f95959;
+  color: var(--customColor);
+  font-size: 10vw;
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
