@@ -8,7 +8,7 @@ export const MobileBurgerIcon = ({ isSidebarOpen }) => {
   // }
 
   return (
-    <button className="burger-container">
+    <div className="burger-container">
       {/* <div className="burger-line line1"></div> */}
       {/* <div className="burger-line line2"></div> */}
       {/* <div className="burger-line line3"></div> */}
@@ -17,6 +17,6 @@ export const MobileBurgerIcon = ({ isSidebarOpen }) => {
         <span></span>
         <span></span>
       </div>
-    </button>
+    </div>
   );
 };

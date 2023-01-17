@@ -13,3 +13,16 @@
   text-transform: uppercase;
   margin-bottom: 50px;
 }
+
+.project-tab {
+  /* margin: 10px; */
+  border-top: solid 40px var(--customColor);
+  box-shadow: 10px 5px 15px red;
+}
+/* 
+.project-tab-title {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -50px;
+  color: white;
+} */
