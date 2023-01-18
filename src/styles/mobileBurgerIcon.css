@@ -93,6 +93,7 @@
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
+  opacity: 1;
 }
 
 #nav-icon4 span:nth-child(3) {
@@ -119,7 +120,8 @@
   opacity: 0;
   */
   /* our version */
-  transform: translateY(20px);
+  transform: translateY(15px);
+  opacity: 0.6;
 }
 
 #nav-icon4.open span:nth-child(3) {
@@ -127,6 +129,6 @@
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 28px;
+  top: 27px;
   left: 8px;
 }

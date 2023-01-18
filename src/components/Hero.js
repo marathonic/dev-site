@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <main className="splash">
       <div className="hero">
-        <h1 className="hero-h1">Hero</h1>
+        <h1 className="hero-h1 with-shadow">Hero</h1>
         <img src={songoku} alt="" className="goku-hero" />
         {/* {`${Goku}`} */}
         {/* <img
