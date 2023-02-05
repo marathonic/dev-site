@@ -55,9 +55,12 @@ button.sb-contact-box {
   bottom: 0;
   left: 0;
   right: 0;
+  margin-right: 9px;
+  opacity: 70%;
 }
 .side-btn:not(:disabled):after,
 .side-btn:after {
+  content: "❖";
   content: "";
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -148,17 +151,18 @@ button.sb-contact-box {
   margin-right: 20px;
 }
 
-.sidebar-li {
+.side-btn {
   /* transition: all 0.5s; */
   /* margin-right: 30px; */
 }
 
-.sidebar-li:hover {
+.side-btn:hover {
   background-color: #454138;
   color: #dcd8c0;
-  /* box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1; */
-  padding-right: 10px;
+  box-shadow: 0.1em 0.1em 0.1em 0 #bab5a1;
+  padding-right: 20px;
   /* background: none; */
+  animation: alternate 0.5s ease blink;
 }
 
 .test-border {
@@ -174,14 +178,14 @@ button.sb-contact-box {
 .test-border-inner:active:not(.current-link) {
   /* padding: 3px; */
   /* padding-top: 2px; */
-  border-top: solid 1px #454138;
+  /* border-top: solid 1px #454138; */
   /* padding-bottom: 2px; */
-  border-bottom: solid 1px #454138;
+  /* border-bottom: solid 1px #454138; */
   /* outline: 1px #454138 inset; */
   /* outline-offset: 2px; */
 }
 
-.sidebar-li.test {
+.side-btn.test {
   /* ---test--- */
   /* border: 3px solid #454138; */
   /* content: ""; */
@@ -207,7 +211,7 @@ button.sb-contact-box {
   margin-top: 50%;
 }
 
-.sidebar-li.current-link,
+.side-btn.current-link,
 .sidebar-contact {
   border-top: solid #c8c2aa 2px;
   border-bottom: solid #c8c2aa 2px;
@@ -216,7 +220,7 @@ button.sb-contact-box {
   color: #454138;
 }
 
-.sidebar-li.current-link::before {
+.side-btn.current-link::before {
 }
 
 .sb-contact-box {
@@ -287,20 +291,35 @@ button.sb-contact-box {
 @keyframes blink {
   0% {
     background-color: inherit;
+    color: #dcd8c0;
   }
   25% {
     background-color: transparent;
+    color: transparent;
   }
 
   50% {
     background-color: inherit;
+    color: #dcd8c0;
   }
 
   75% {
     background-color: transparent;
+    color: transparent;
+  }
+
+  80% {
+    background-color: none;
+    color: #dcd8c0;
+  }
+
+  90% {
+    background-color: #454138;
+    color: transparent;
   }
 
   100% {
     background-color: inherit;
+    color: #dcd8c0;
   }
 }

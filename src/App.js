@@ -31,7 +31,10 @@ function App() {
         setIsSidebarOpen={setIsSidebarOpen}
         isSidebarOpen={isSidebarOpen}
       />
-      <MobileSidebar isSidebarOpen={isSidebarOpen} />
+      <MobileSidebar
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+      />
       {/* {isSidebarOpen && <MobileSidebar />} */}
       <header className="App-header"></header>
       <Hero />

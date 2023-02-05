@@ -2,7 +2,11 @@ import React, { useState } from "react";
 // import "../yorha.css";
 import "../styles/mobileSidebar.css";
 
-export const MobileSidebar = ({ isSidebarOpen }) => {
+export const MobileSidebar = ({
+  isSidebarOpen,
+  handleSidebarToggle,
+  setIsSidebarOpen,
+}) => {
   let option1 = document.querySelector(".current-link");
 
   const [isSelected, setIsSelected] = useState(null);
@@ -13,13 +17,21 @@ export const MobileSidebar = ({ isSidebarOpen }) => {
     // clickedListItem.classList.add("testing-shit");
     console.log("clicked this link ==>", e.target.id);
   }
-
+  // delete this below ~~
   const allBtns = document.querySelectorAll(".side-btn");
   allBtns?.forEach((btn) => {
     btn.addEventListener("click", function (e) {
       console.log(e.target.id);
     });
   });
+  // delete this above ~~~
+
+  const closeWithDelay = () => {
+    setTimeout(() => {
+      setIsSidebarOpen(false);
+    }, 700);
+    return;
+  };
 
   return (
     <>
@@ -32,6 +44,7 @@ export const MobileSidebar = ({ isSidebarOpen }) => {
                   <button
                     className="sidebar-li current-link side-btn"
                     id="sb-home"
+                    onClick={closeWithDelay}
                   >
                     Home
                   </button>
@@ -39,14 +52,22 @@ export const MobileSidebar = ({ isSidebarOpen }) => {
               </li>
               <li className="test-border">
                 <div className="test-border-inner">
-                  <button className="sidebar-li side-btn" id="sb-proj">
+                  <button
+                    className="sidebar-li side-btn"
+                    id="sb-proj"
+                    onClick={closeWithDelay}
+                  >
                     Projects
                   </button>
                 </div>
               </li>
               <li className="test-border">
                 <div className="test-border-inner">
-                  <button className="sidebar-li side-btn" id="sb-about">
+                  <button
+                    className="sidebar-li side-btn"
+                    id="sb-about"
+                    onClick={closeWithDelay}
+                  >
                     About
                   </button>
                 </div>
