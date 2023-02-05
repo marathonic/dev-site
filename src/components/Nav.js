@@ -20,9 +20,15 @@ export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
     <nav className="nav">
       {isDesktop && (
         <ul className="nav-ul">
-          <li className="nav-li">Projects</li>
-          <li className="nav-li">Contact</li>
-          <li className="nav-li">Story</li>
+          <li className="nav-li">
+            <button>Projects</button>
+          </li>
+          <li className="nav-li">
+            <button>Contact</button>
+          </li>
+          <li className="nav-li">
+            <button>Story</button>
+          </li>
         </ul>
       )}
       {!isDesktop && (

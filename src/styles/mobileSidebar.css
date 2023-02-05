@@ -1,3 +1,109 @@
+button.sb-contact-box {
+  appearance: none;
+  border: transparent;
+  /* background-color: rgb(201, 162, 111); */
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.6rem;
+}
+
+/* button from yorha.css */
+
+.side-btn {
+  /* appearance: none; */
+
+  padding: 0.5rem;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background-color: #bab5a1;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  -webkit-tap-highlight-color: transparent;
+}
+.side-btn:not(:disabled):hover,
+.side-btn:hover {
+  /* -webkit-box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1; */
+  /* box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1; */
+}
+.side-btn:not(:disabled):before,
+.side-btn:before {
+  content: "";
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.side-btn:not(:disabled):after,
+.side-btn:after {
+  content: "";
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: #454138;
+  z-index: -1;
+}
+.side-btn:not(:disabled):hover,
+.side-btn:hover {
+  background-color: transparent;
+  color: #dcd8c0;
+}
+.side-btn:not(:disabled):hover:before,
+.side-btn:hover:before {
+  top: -0.2rem;
+  bottom: -0.2rem;
+  border: solid #454138;
+  border-width: 0.1rem 0;
+}
+.side-btn:not(:disabled):hover:after,
+.side-btn:hover:after {
+  width: 100%;
+}
+.side-btn:not(:disabled):active,
+.side-btn:active {
+  color: #454138;
+}
+.side-btn:not(:disabled):active:after,
+.side-btn:active:after {
+  background-color: #dcd8c0;
+}
+
+/* button section end */
+
 .sidebar {
   background-color: rgba(245, 246, 219, 0.9);
   /* color: black; */
@@ -43,7 +149,7 @@
 }
 
 .sidebar-li {
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
   /* margin-right: 30px; */
 }
 
@@ -68,8 +174,8 @@
 .test-border-inner:active:not(.current-link) {
   /* padding: 3px; */
   /* padding-top: 2px; */
-  /* padding-bottom: 2px; */
   border-top: solid 1px #454138;
+  /* padding-bottom: 2px; */
   border-bottom: solid 1px #454138;
   /* outline: 1px #454138 inset; */
   /* outline-offset: 2px; */
@@ -139,8 +245,24 @@
   border-right: solid 2px #c8c2aa;
 }
 
-.sidebar-li:active {
-  animation: 1s ease-in alternate pageSelection;
+.current-link {
+  /* background: #c8c2aa; */
+
+  /* background-image: linear-gradient( */
+  /* 90deg, */
+  /* rgba(#4d493e, 0.2), */
+  /* rgba(#4d493e, 0.2) 14px, */
+  /* transparent 14px, */
+  /* transparent 20px, */
+  /* rgba(#4d493e, 0.2) 20px, */
+  /* rgba(#4d493e, 0.2) 23px, */
+  /* transparent 23px */
+  /* ); */
+}
+
+.testing-shit {
+  /* background-color: yellow; */
+  /* font-size: 4rem; */
 }
 
 @keyframes fadeIn {
@@ -162,38 +284,23 @@
   }
 }
 
-@keyframes pageSelection {
+@keyframes blink {
   0% {
-    /* background-color: purple; */
-    border-top: solid 1px #454138;
-    border-bottom: solid 1px #454138;
-    border-color: #454138;
-    background-color: #454138;
-    color: #dcd8c0;
-    padding-right: 0;
+    background-color: inherit;
   }
-
   25% {
-    border-color: transparent;
+    background-color: transparent;
   }
 
   50% {
-    background-color: red;
-    padding-right: 10px;
-
-    /* border-top: solid 1px #454138; */
-    /* border-bottom: solid 1px #454138; */
-    border-color: #454138;
+    background-color: inherit;
   }
 
   75% {
-    border-color: transparent;
+    background-color: transparent;
   }
 
   100% {
-    background-color: antiquewhite;
-    /* border-top: solid 1px #454138; */
-    /* border-bottom: solid 1px #454138; */
-    border-color: #454138;
+    background-color: inherit;
   }
 }
