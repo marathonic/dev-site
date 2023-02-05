@@ -38,8 +38,8 @@ export const MobileSidebar = ({
     if (clickedId === onPageText) {
       return;
     }
-    if (clicked.classList.contains("current-link")) return;
-    clicked.classList.add("side-btn");
+    // if (clicked.classList.contains("current-link")) return;
+    // clicked.classList.add("side-btn");
     setTimeout(() => {
       setIsSidebarOpen(false);
     }, 700);
@@ -55,7 +55,7 @@ export const MobileSidebar = ({
               <li className="test-border current-link">
                 <div className="test-border-inner current-link">
                   <button
-                    className="current-link "
+                    className="current-link side-btn"
                     id="sb-home"
                     onClick={handleClick}
                   >
@@ -65,14 +65,22 @@ export const MobileSidebar = ({
               </li>
               <li className="test-border">
                 <div className="test-border-inner">
-                  <button className="" id="sb-proj" onClick={handleClick}>
+                  <button
+                    className="side-btn"
+                    id="sb-proj"
+                    onClick={handleClick}
+                  >
                     Projects
                   </button>
                 </div>
               </li>
               <li className="test-border">
                 <div className="test-border-inner">
-                  <button className="" id="sb-about" onClick={handleClick}>
+                  <button
+                    className="side-btn"
+                    id="sb-about"
+                    onClick={handleClick}
+                  >
                     About
                   </button>
                 </div>

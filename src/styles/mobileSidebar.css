@@ -6,7 +6,7 @@ button.sb-contact-box {
   justify-content: space-evenly;
   font-size: 1.6rem;
 }
-
+/* 
 .sidebar-container button {
   padding: 0.5rem;
   font-size: 1em;
@@ -33,6 +33,7 @@ button.sb-contact-box {
   text-align: right;
   -webkit-tap-highlight-color: transparent;
 }
+*/
 
 /* button from yorha.css */
 
