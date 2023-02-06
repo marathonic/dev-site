@@ -9,7 +9,39 @@ button.sb-contact-box {
 
 /* button from yorha.css */
 
-.side-btn {
+.side-btn.current-link {
+  border-top: solid #c8c2aa 2px;
+  border-bottom: solid #c8c2aa 2px;
+
+  background-color: #dcd8c0;
+  color: #454138;
+  padding: 0.5rem;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background-color: #bab5a1;
+  /* background-color: transparent; */
+  /* color: inherit; */
+  font-family: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.side-btn:not(.current-link) {
   /* appearance: none; */
 
   padding: 0.5rem;
@@ -37,12 +69,12 @@ button.sb-contact-box {
   text-align: right;
   -webkit-tap-highlight-color: transparent;
 }
-.side-btn:not(:disabled):hover,
+.side-btn:not(.current-link):hover,
 .side-btn:hover {
   /* -webkit-box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1; */
   /* box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1; */
 }
-.side-btn:not(:disabled):before {
+.side-btn:not(.current-link):before {
   content: "";
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -57,7 +89,7 @@ button.sb-contact-box {
   margin-right: 9px;
   opacity: 80%;
 }
-.side-btn:not(:disabled):after {
+.side-btn:not(.current-link):after {
   content: "❖";
   content: "";
   -webkit-transition: all 0.2s;
@@ -78,23 +110,23 @@ button.sb-contact-box {
   background-color: #454138;
   z-index: -1;
 }
-.side-btn:not(:disabled):hover {
+.side-btn:not(.current-link):hover {
   background-color: transparent;
   color: #dcd8c0;
 }
-.side-btn:not(:disabled):hover:before {
+.side-btn:not(.current-link):hover:before {
   top: -0.2rem;
   bottom: -0.2rem;
   border: solid #454138;
   border-width: 0.1rem 0;
 }
-.side-btn:not(:disabled):hover:after {
+.side-btn:not(.current-link):hover:after {
   width: 100%;
 }
-.side-btn:not(:disabled):active {
+.side-btn:not(.current-link):active {
   color: #454138;
 }
-.side-btn:not(:disabled):active:after {
+.side-btn:not(.current-link):active:after {
   background-color: #dcd8c0;
 }
 
@@ -149,7 +181,7 @@ button.sb-contact-box {
   /* margin-right: 30px; */
 }
 
-.side-btn:hover {
+.side-btn:not(.current-link):hover {
   background-color: #454138;
   color: #dcd8c0;
   box-shadow: 0.1em 0.1em 0.1em 0 #bab5a1;
@@ -204,7 +236,7 @@ button.sb-contact-box {
   margin-top: 50%;
 }
 
-.side-btn.current-link,
+/* .side-btn.current-link, */
 .sidebar-contact {
   border-top: solid #c8c2aa 2px;
   border-bottom: solid #c8c2aa 2px;
