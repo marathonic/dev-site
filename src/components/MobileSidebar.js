@@ -26,7 +26,14 @@ export const MobileSidebar = ({
   });
   // delete this above ~~~
 
-  const closeWithDelay = () => {
+  const closeWithDelay = (e) => {
+    let targ = e.target.id;
+    let clicked = targ.substring(3);
+    let curr = document.querySelector(".current-link");
+    let currentPage = curr.textContent.toLowerCase();
+    console.log("current page", "==>", currentPage);
+    console.log("clicked", "==>", clicked);
+    if (currentPage === clicked) return;
     setTimeout(() => {
       setIsSidebarOpen(false);
     }, 700);

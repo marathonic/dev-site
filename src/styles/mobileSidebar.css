@@ -56,7 +56,7 @@ button.sb-contact-box {
   left: 0;
   right: 0;
   margin-right: 9px;
-  opacity: 70%;
+  opacity: 80%;
 }
 .side-btn:not(:disabled):after,
 .side-btn:after {
