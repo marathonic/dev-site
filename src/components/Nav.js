@@ -8,6 +8,10 @@ export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
     const sidebarContainer = document.querySelector(".sidebar-container");
     if (isSidebarOpen && !sidebarContainer?.classList.contains("fade-out")) {
       sidebarContainer?.classList.add("fade-out");
+      // find the link to the page we're currently on, and disable the button
+      // EDIT: We can just handle this from MobileSidebar.js
+      // let btnToCurrentPage = document.querySelector(".current-link");
+      // btnToCurrentPage?.disabled
       setTimeout(() => {
         setIsSidebarOpen(!isSidebarOpen);
       }, 700);

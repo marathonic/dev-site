@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import "../yorha.css";
 import "../styles/mobileSidebar.css";
 
@@ -11,24 +11,23 @@ export const MobileSidebar = ({
 
   const [isSelected, setIsSelected] = useState(null);
 
-  function selectLink(e) {
-    // const shit = document.querySelector(".sidebar-ul");
-    // const clickedListItem = e.target;
-    // clickedListItem.classList.add("testing-shit");
-    console.log("clicked this link ==>", e.target.id);
-  }
   // delete this below ~~
-  const allBtns = document.querySelectorAll(".side-btn");
-  allBtns?.forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      console.log(e.target.id);
-    });
-  });
+  // const allBtns = document.querySelectorAll(".side-btn");
+  // allBtns?.forEach((btn) => {
+  // btn.addEventListener("click", function (e) {
+  // console.log(e.target.id);
+  // });
+  // });
   // delete this above ~~~
 
   const closeWithDelay = (e) => {
-    let targ = e.target.id;
-    let clicked = targ.substring(3);
+    // If the button we clicked is disabled, nothing should happen by default, and no code should run, right? That's the point.
+    // So if this is running, it means we've clicked a button other than the disabled one.
+    // SO we should find what that disabled button is, and set it to not be disabled, then we disable the button we have just clicked.
+
+    let btn = e.target;
+
+    let clicked = btn.id.substring(3);
     let curr = document.querySelector(".current-link");
     let currentPage = curr.textContent.toLowerCase();
     console.log("current page", "==>", currentPage);
@@ -39,6 +38,10 @@ export const MobileSidebar = ({
     }, 700);
     return;
   };
+
+  useEffect(() => {
+    console.log("test");
+  }, []);
 
   return (
     <>
