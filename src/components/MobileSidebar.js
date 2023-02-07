@@ -7,33 +7,27 @@ export const MobileSidebar = ({
   handleSidebarToggle,
   setIsSidebarOpen,
 }) => {
-  let option1 = document.querySelector(".current-link");
-
-  const [isSelected, setIsSelected] = useState(null);
-
-  function selectLink(e) {
-    // const shit = document.querySelector(".sidebar-ul");
-    // const clickedListItem = e.target;
-    // clickedListItem.classList.add("testing-shit");
-    console.log("clicked this link ==>", e.target.id);
-  }
+  const [currentScroll, setCurrentScroll] = useState("home");
   // delete this below ~~
-  const allBtns = document.querySelectorAll(".side-btn");
-  allBtns?.forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      console.log(e.target.id);
-    });
-  });
+  // const allBtns = document.querySelectorAll(".side-btn");
+  // allBtns?.forEach((btn) => {
+  // btn.addEventListener("click", function (e) {
+  // console.log(e.target.id);
+  // });
+  // });
   // delete this above ~~~
 
   const closeWithDelay = (e) => {
-    let targ = e.target;
-    let clicked = targ.id.substring(3);
-    let curr = document.querySelector(".current-link");
-    let currentPage = curr.textContent.toLowerCase();
-    if (currentPage === clicked) return;
+    let targ = e.target.id;
+    let clicked = targ.substring(3);
+    // let curr = document.querySelector(".current-link");
+    // let currentPage = curr.textContent.toLowerCase();
+    // if (currentPage === clicked) return;
+    if (clicked === currentScroll) return;
+    console.log(clicked);
     setTimeout(() => {
       setIsSidebarOpen(false);
+      setCurrentScroll(clicked);
     }, 700);
     return;
   };
@@ -44,19 +38,28 @@ export const MobileSidebar = ({
         <div className="sidebar">
           <div className="sidebar-container fade-in">
             <ul className="sidebar-ul" id="shit-id-test">
-              <li className="test-border">
-                <div className="test-border-inner">
+              <li className="test-border current-link">
+                {currentScroll !== "home" && (
                   <button
-                    className="sidebar-li current-link side-btn"
+                    className="sidebar-li side-btn"
                     id="sb-home"
                     onClick={closeWithDelay}
                   >
                     Home
                   </button>
-                </div>
+                )}
+                {currentScroll === "home" && (
+                  <button
+                    className="sidebar-li side-btn current-link"
+                    id="sb-home"
+                    onClick={closeWithDelay}
+                  >
+                    Home
+                  </button>
+                )}
               </li>
               <li className="test-border">
-                <div className="test-border-inner">
+                {currentScroll !== "proj" && (
                   <button
                     className="sidebar-li side-btn"
                     id="sb-proj"
@@ -64,18 +67,25 @@ export const MobileSidebar = ({
                   >
                     Projects
                   </button>
-                </div>
-              </li>
-              <li className="test-border">
-                <div className="test-border-inner">
+                )}
+                {currentScroll === "proj" && (
                   <button
-                    className="sidebar-li side-btn"
-                    id="sb-about"
+                    className="sidebar-li side-btn current-link"
+                    id="sb-proj"
                     onClick={closeWithDelay}
                   >
-                    About
+                    Projects
                   </button>
-                </div>
+                )}
+              </li>
+              <li className="test-border">
+                <button
+                  className="sidebar-li side-btn"
+                  id="sb-about"
+                  onClick={closeWithDelay}
+                >
+                  About
+                </button>
               </li>
             </ul>
             <div className="sidebar-contact">

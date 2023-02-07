@@ -39,6 +39,12 @@ button.sb-contact-box {
   width: 100%;
   text-align: right;
   -webkit-tap-highlight-color: transparent;
+
+  border-top: solid #c8c2aa 2px;
+  border-bottom: solid #c8c2aa 2px;
+
+  background-color: #dcd8c0;
+  color: #454138;
 }
 
 .side-btn:not(.current-link) {
@@ -59,11 +65,11 @@ button.sb-contact-box {
   letter-spacing: inherit;
   font-weight: inherit;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.16s;
+  -moz-transition: all 0.16s;
+  -o-transition: all 0.16s;
+  -ms-transition: all 0.16s;
+  transition: all 0.16s;
   position: relative;
   width: 100%;
   text-align: right;
@@ -76,11 +82,11 @@ button.sb-contact-box {
 }
 .side-btn:not(.current-link):before {
   content: "";
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.16s;
+  -moz-transition: all 0.16s;
+  -o-transition: all 0.16s;
+  -ms-transition: all 0.16s;
+  transition: all 0.16s;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -92,11 +98,11 @@ button.sb-contact-box {
 .side-btn:not(.current-link):after {
   content: "❖";
   content: "";
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.16s;
+  -moz-transition: all 0.16s;
+  -o-transition: all 0.16s;
+  -ms-transition: all 0.16s;
+  transition: all 0.16s;
   -webkit-transition-timing-function: ease-out;
   -moz-transition-timing-function: ease-out;
   -o-transition-timing-function: ease-out;
