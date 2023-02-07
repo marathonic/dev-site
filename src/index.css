@@ -11,6 +11,11 @@
   --gentleBeige: #d3cdb4;
   --lightGentleBeige: #ded7bc;
   --gentleBeigeOriginal: #c8c2aa;
+
+  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  /* font-weight: lighter; */
 }
 
 html {
@@ -18,9 +23,6 @@ html {
 }
 
 body {
-  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: teal;
