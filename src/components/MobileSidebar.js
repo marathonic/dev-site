@@ -25,6 +25,8 @@ export const MobileSidebar = ({
     // if (currentPage === clicked) return;
     if (clicked === currentScroll) return;
     console.log(clicked);
+    // let curr = document.querySelector(".current-link");
+    // curr?.classList.remove("current-link");
     setTimeout(() => {
       setIsSidebarOpen(false);
       setCurrentScroll(clicked);
@@ -79,13 +81,24 @@ export const MobileSidebar = ({
                 )}
               </li>
               <li className="test-border">
-                <button
-                  className="sidebar-li side-btn"
-                  id="sb-about"
-                  onClick={closeWithDelay}
-                >
-                  About
-                </button>
+                {currentScroll !== "about" && (
+                  <button
+                    className="sidebar-li side-btn"
+                    id="sb-about"
+                    onClick={closeWithDelay}
+                  >
+                    About
+                  </button>
+                )}
+                {currentScroll === "about" && (
+                  <button
+                    className="sidebar-li side-btn current-link"
+                    id="sb-about"
+                    onClick={closeWithDelay}
+                  >
+                    About
+                  </button>
+                )}
               </li>
             </ul>
             <div className="sidebar-contact">
