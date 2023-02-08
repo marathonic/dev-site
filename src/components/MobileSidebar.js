@@ -47,17 +47,19 @@ export const MobileSidebar = ({
                     id="sb-home"
                     onClick={closeWithDelay}
                   >
-                    <span className="select-icon">Home</span>
+                    Home
                   </button>
                 )}
                 {currentScroll === "home" && (
-                  <button
-                    className="sidebar-li side-btn current-link"
-                    id="sb-home"
-                    onClick={closeWithDelay}
-                  >
-                    Home
-                  </button>
+                  <span className="selection-icon">
+                    <button
+                      className="sidebar-li side-btn current-link"
+                      id="sb-home"
+                      onClick={closeWithDelay}
+                    >
+                      Home
+                    </button>
+                  </span>
                 )}
               </li>
               <li className="test-border">
@@ -71,13 +73,15 @@ export const MobileSidebar = ({
                   </button>
                 )}
                 {currentScroll === "proj" && (
-                  <button
-                    className="sidebar-li side-btn current-link"
-                    id="sb-proj"
-                    onClick={closeWithDelay}
-                  >
-                    Projects
-                  </button>
+                  <span className="selection-icon">
+                    <button
+                      className="sidebar-li side-btn current-link"
+                      id="sb-proj"
+                      onClick={closeWithDelay}
+                    >
+                      Projects
+                    </button>
+                  </span>
                 )}
               </li>
               <li className="test-border">
@@ -91,13 +95,15 @@ export const MobileSidebar = ({
                   </button>
                 )}
                 {currentScroll === "about" && (
-                  <button
-                    className="sidebar-li side-btn current-link"
-                    id="sb-about"
-                    onClick={closeWithDelay}
-                  >
-                    About
-                  </button>
+                  <span className="selection-icon">
+                    <button
+                      className="sidebar-li side-btn current-link"
+                      id="sb-about"
+                      onClick={closeWithDelay}
+                    >
+                      About
+                    </button>
+                  </span>
                 )}
               </li>
             </ul>
