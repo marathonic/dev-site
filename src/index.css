@@ -103,3 +103,9 @@ h1.with-shadow {
   font-family: Quicksand;
   src: url("./assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
+
+@media only screen and (min-width: 767px) {
+  .hero-h1 {
+    font-size: 10rem;
+  }
+}

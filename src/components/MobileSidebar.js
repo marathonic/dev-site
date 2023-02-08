@@ -47,7 +47,7 @@ export const MobileSidebar = ({
                     id="sb-home"
                     onClick={closeWithDelay}
                   >
-                    Home
+                    <span className="select-icon">Home</span>
                   </button>
                 )}
                 {currentScroll === "home" && (
