@@ -99,6 +99,19 @@ h1.with-shadow {
   font-size: 20vw;
 }
 
+.h1-section {
+  /* text-shadow: 0.3rem 0.3rem 0 #bab5a1; */
+  /* color: #f95959; */
+  /* color: var(--customColor); */
+  /* font-family: Arial; */
+  /* font-weight: lighter; */
+  color: white;
+  font-size: 12vw;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-bottom: 50px;
+}
+
 @font-face {
   font-family: Quicksand;
   src: url("./assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");

@@ -5,19 +5,19 @@
   margin-top: 6px;
   background-color: #4d493e;
 }
-
-.h1-projects {
-  /* text-shadow: 0.3rem 0.3rem 0 #bab5a1; */
-  /* color: #f95959; */
-  /* color: var(--customColor); */
-  /* font-family: Arial; */
-  /* font-weight: lighter; */
-  color: white;
-  font-size: 12vw;
-  text-transform: uppercase;
-  font-weight: lighter;
-  margin-bottom: 50px;
-}
+/*  */
+/* .h1-projects { */
+/* text-shadow: 0.3rem 0.3rem 0 #bab5a1; */
+/* color: #f95959; */
+/* color: var(--customColor); */
+/* font-family: Arial; */
+/* font-weight: lighter; */
+/* color: white; */
+/* font-size: 12vw; */
+/* text-transform: uppercase; */
+/* font-weight: lighter; */
+/* margin-bottom: 50px; */
+/* } */
 
 .mapped-repos-container {
   width: 100%;
@@ -39,5 +39,9 @@
 @media only screen and (min-width: 767px) {
   .h1-projects {
     font-size: 3rem;
+  }
+
+  .project-preview {
+    font-size: 1.8rem;
   }
 }

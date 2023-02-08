@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 import { MobileSidebar } from "./components/MobileSidebar";
 import { Projects } from "./components/Projects";
+import About from "./components/About";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -39,6 +40,7 @@ function App() {
       <header className="App-header"></header>
       <Hero />
       <Projects />
+      <About />
     </div>
   );
 }

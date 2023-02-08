@@ -1,0 +1,27 @@
+.about-container {
+  background-color: white;
+}
+
+.h1-section.h1-about {
+  color: purple;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.6rem;
+}
+
+.dev-tech-icon {
+  width: 120px;
+}
+
+/* tablet style */
+@media only screen and (min-width: 767px) {
+  .h1-projects {
+    font-size: 3rem;
+  }
+
+  .project-preview {
+    font-size: 1.8rem;
+  }
+}

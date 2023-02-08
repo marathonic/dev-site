@@ -20,7 +20,7 @@ export const Projects = () => {
 
   return (
     <div className="projects-container">
-      <h1 className="h1-projects">Featured</h1>
+      <h1 className="h1-section">Featured</h1>
       <div className="mapped-repos-container">{mappedRepos}</div>
     </div>
   );
