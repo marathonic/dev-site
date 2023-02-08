@@ -9,6 +9,12 @@
 
 .about-description {
   font-size: 1.6rem;
+  text-align: center;
+}
+
+.dev-stack-icons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .dev-tech-icon {
