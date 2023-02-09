@@ -7,7 +7,7 @@
 
 :root {
   /* colours - colors */
-  --customColor: #4d493e;
+  --darkText: #4d493e;
   --gentleBeige: #d3cdb4;
   --lightGentleBeige: #ded7bc;
   --gentleBeigeOriginal: #c8c2aa;
@@ -55,8 +55,8 @@ body {
       rgba(0, 0, 0, 0.07) 4px
     ),
     linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px);
-  /* box-shadow: inset 0 0 150px var(--customColor), 0.4, */
-  /* inset 0 0 150px var(--customColor), 0.3; */
+  /* box-shadow: inset 0 0 150px var(--darkText), 0.4, */
+  /* inset 0 0 150px var(--darkText), 0.3; */
   /* test */
 }
 
@@ -73,6 +73,7 @@ h1.with-shadow {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: #dcd8c0;
 }
 
 .hero {
@@ -87,7 +88,7 @@ h1.with-shadow {
 
 .hero-h1 {
   color: #f95959;
-  color: var(--customColor);
+  color: var(--darkText);
   font-size: 8rem;
   font-weight: lighter;
 }
@@ -95,14 +96,14 @@ h1.with-shadow {
 .h1-categ {
   text-shadow: 0.3rem 0.3rem 0 #bab5a1;
   color: #f95959;
-  color: var(--customColor);
+  color: var(--darkText);
   font-size: 20vw;
 }
 
 .h1-section {
   /* text-shadow: 0.3rem 0.3rem 0 #bab5a1; */
   /* color: #f95959; */
-  /* color: var(--customColor); */
+  /* color: var(--darkText); */
   /* font-family: Arial; */
   /* font-weight: lighter; */
   color: white;

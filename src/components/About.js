@@ -12,7 +12,6 @@ function About() {
     <section className="about-container">
       <h1 className="h1-section h1-about">About</h1>
       <span className="about-description">
-        <p>Full stack developer</p>
         <div className="dev-stack-icons">
           <IoLogoHtml5 size={70} color="crimson" />
           <IoLogoCss3 size={70} color="purple" />
@@ -20,12 +19,13 @@ function About() {
           <IoLogoReact size={70} color="cyan" />
           {/* 
           <img
-            className="dev-tech-icon"
-            src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-            alt="javascript logo"
+          className="dev-tech-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+          alt="javascript logo"
           />
-           */}
+        */}
         </div>
+        <p>Full stack dev</p>
       </span>
     </section>
   );
