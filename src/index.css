@@ -60,6 +60,10 @@ body {
   /* test */
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .lock-scroll {
   overflow: hidden;
 }

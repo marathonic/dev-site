@@ -25,7 +25,12 @@ function About() {
           />
         */}
         </div>
-        <p>Full stack dev</p>
+      </span>
+      <span className="about-description">
+        <p className="bold">
+          I'm a passionate full stack dev eager to join an organisation with a
+          mission.
+        </p>
       </span>
     </section>
   );
