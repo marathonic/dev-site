@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { MobileSidebar } from "./components/MobileSidebar";
 import { Projects } from "./components/Projects";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -41,6 +42,7 @@ function App() {
       <Hero />
       <Projects />
       <About />
+      <Contact />
     </div>
   );
 }

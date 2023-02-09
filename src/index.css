@@ -111,6 +111,7 @@ h1.with-shadow {
   text-transform: uppercase;
   font-weight: lighter;
   margin-bottom: 50px;
+  margin-bottom: 0;
 }
 
 @font-face {
