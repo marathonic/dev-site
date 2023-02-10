@@ -31,6 +31,18 @@ function About() {
           I'm a passionate full stack dev eager to join an organization with a
           mission.
         </p>
+        <br />
+
+        <h3 className="about-skills-title">Current Skills</h3>
+        <br />
+
+        <ul>
+          <li>JS</li>
+          <li>CSS</li>
+          <li>React</li>
+          <li>Firebase</li>
+          <li>Audio design</li>
+        </ul>
       </span>
     </section>
   );
