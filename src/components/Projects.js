@@ -5,7 +5,7 @@ export const Projects = () => {
   const repos = [
     {
       title: "myAnimeLog",
-      img: "src",
+      img: "/myAnimeLogScreenshot.png",
       description: "I made this to track my anime",
       link: "https://myanimelog.vercel.app/",
     },
@@ -37,6 +37,9 @@ export const Projects = () => {
             <h3 className="project-title">{`${repo.title}`}</h3>
             <p className="project-description">{repo.description}</p>
           </span>
+          <div className="project-thumbnail-div">
+            <img src={repo.img} alt="logo"></img>
+          </div>
         </div>
       </a>
     );

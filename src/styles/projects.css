@@ -48,7 +48,7 @@
   background-color: #f0ecd8;
 
   /* border: solid #4d493e 1px; */
-  height: 5rem;
+  min-height: 5rem;
   margin: 10px;
 }
 
@@ -56,6 +56,15 @@
   /* font-weight: lighter; */
   letter-spacing: 1px;
   font-size: 1.4rem;
+}
+
+.project-thumbnail-div {
+  width: 100%;
+  min-height: max-content;
+}
+
+.project-thumbnail-div > img {
+  width: 80%;
 }
 
 .project-description {
