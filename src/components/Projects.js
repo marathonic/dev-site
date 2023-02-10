@@ -3,24 +3,33 @@ import "../styles/projects.css";
 
 export const Projects = () => {
   const repos = [
-    { title: "animeLog", img: "src", description: "A free anime tracker" },
     {
-      title: "heroFinder",
+      title: "myAnimeLog",
       img: "src",
-      description: "Where's Waldo, but with superheroes",
+      description: "I made this to track my anime",
+      link: "https://myanimelog.vercel.app/",
     },
     {
-      title: "starShip",
+      title: "SuperFinder",
       img: "src",
-      description: "Battleship, but trekkie",
+      description: "Where's Waldo, but with superheroes",
+      link: "https://marathonic.github.io/photo-tagging-app/",
+    },
+    {
+      title: "Hollywander's",
+      img: "src",
+      description: "Mock online shop",
+      link: "https://marathonic.github.io/online-shop/",
     },
   ];
 
   const mappedRepos = repos.map((repo) => {
     return (
       <a
-        href="https://www.google.com"
+        href={repo.link}
         key={repo.title}
+        target="_blank"
+        rel="noopener noreferrer"
         className="single-project-container"
       >
         <div className="project-preview">

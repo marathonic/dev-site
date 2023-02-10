@@ -23,7 +23,7 @@ function Contact() {
         </a>
         <a href="tel:+522223638615" className="contact-icon-btn">
           <FaSms size={50} className="contact-icon" />
-          <p>Text SMS</p>
+          <p>SMS</p>
         </a>
       </span>
       <span className="contact-thanks">

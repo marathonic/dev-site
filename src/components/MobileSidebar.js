@@ -106,6 +106,28 @@ export const MobileSidebar = ({
                   </span>
                 )}
               </li>
+              <li className="test-border">
+                {currentScroll !== "contact" && (
+                  <button
+                    className="sidebar-li side-btn"
+                    id="sb-contact"
+                    onClick={closeWithDelay}
+                  >
+                    Contact
+                  </button>
+                )}
+                {currentScroll === "contact" && (
+                  <span className="selection-icon">
+                    <button
+                      className="sidebar-li side-btn current-link"
+                      id="sb-contact"
+                      onClick={closeWithDelay}
+                    >
+                      Contact
+                    </button>
+                  </span>
+                )}
+              </li>
             </ul>
             <div className="sidebar-contact">
               <button className="sb-contact-box">Call</button>
