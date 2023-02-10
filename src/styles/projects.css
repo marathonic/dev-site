@@ -56,11 +56,13 @@
   /* font-weight: lighter; */
   letter-spacing: 1px;
   font-size: 1.4rem;
+  color: var(--darkText);
 }
 
 .project-thumbnail-div {
   width: 100%;
   min-height: max-content;
+  color: var(--darkText);
 }
 
 .project-thumbnail-div > img {

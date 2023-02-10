@@ -1,22 +1,31 @@
 import React from "react";
 import "../styles/projects.css";
+import {
+  GiBroadsword,
+  GiSpellBook,
+  GiMagnifyingGlass,
+  GiShoppingCart,
+} from "react-icons/gi";
 
 export const Projects = () => {
   const repos = [
     {
       title: "myAnimeLog",
-      img: "/myAnimeLogScreenshot.png",
-      description: "I made this to track my anime",
+      // img: "/myAnimeLogScreenshot.png",
+      type: "anime",
+      description: "I made this to keep track of my anime",
       link: "https://myanimelog.vercel.app/",
     },
     {
       title: "SuperFinder",
+      type: "game",
       img: "src",
       description: "Where's Waldo, but with superheroes",
       link: "https://marathonic.github.io/photo-tagging-app/",
     },
     {
       title: "Hollywander's",
+      type: "ecommerce",
       img: "src",
       description: "Mock online shop",
       link: "https://marathonic.github.io/online-shop/",
@@ -38,7 +47,10 @@ export const Projects = () => {
             <p className="project-description">{repo.description}</p>
           </span>
           <div className="project-thumbnail-div">
-            <img src={repo.img} alt="logo"></img>
+            {/* <img src={repo.img} alt="logo"></img> */}
+            {repo.type === "anime" ? <GiSpellBook size={50} /> : ""}
+            {repo.type === "game" && <GiMagnifyingGlass size={50} />}
+            {repo.type === "ecommerce" && <GiShoppingCart size={50} />}
           </div>
         </div>
       </a>
