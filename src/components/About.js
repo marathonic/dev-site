@@ -28,7 +28,7 @@ function About() {
       </span>
       <span className="about-description">
         <p className="bold">
-          I'm a passionate full stack dev eager to join an organisation with a
+          I'm a passionate full stack dev eager to join an organization with a
           mission.
         </p>
       </span>

@@ -3,18 +3,33 @@ import "../styles/projects.css";
 
 export const Projects = () => {
   const repos = [
-    { title: "animeLog", img: "src" },
-    { title: "heroFinder", img: "src" },
-    { title: "starShip", img: "src" },
+    { title: "animeLog", img: "src", description: "A free anime tracker" },
+    {
+      title: "heroFinder",
+      img: "src",
+      description: "Where's Waldo, but with superheroes",
+    },
+    {
+      title: "starShip",
+      img: "src",
+      description: "Battleship, but trekkie",
+    },
   ];
 
   const mappedRepos = repos.map((repo) => {
     return (
-      <div key={repo.title} className="project-preview">
-        <span>
-          <p>{`${repo.title}`}</p>
-        </span>
-      </div>
+      <a
+        href="https://www.google.com"
+        key={repo.title}
+        className="single-project-container"
+      >
+        <div className="project-preview">
+          <span>
+            <h3 className="project-title">{`${repo.title}`}</h3>
+            <p className="project-description">{repo.description}</p>
+          </span>
+        </div>
+      </a>
     );
   });
 

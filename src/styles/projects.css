@@ -29,6 +29,11 @@
   text-shadow: 0.1rem 0.1rem 0 gray;
 }
 
+.single-project-container {
+  text-decoration: none;
+  color: black;
+}
+
 .mapped-repos-container {
   width: 100%;
 }
@@ -40,9 +45,21 @@
   align-items: center;
 
   background-color: whitesmoke;
+  background-color: #f0ecd8;
+
   /* border: solid #4d493e 1px; */
   height: 5rem;
   margin: 10px;
+}
+
+.project-title {
+  /* font-weight: lighter; */
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+
+.project-description {
+  font-size: 1.2rem;
 }
 
 /* tablet style */
