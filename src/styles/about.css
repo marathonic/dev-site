@@ -38,11 +38,28 @@
 
 /* tablet style */
 @media only screen and (min-width: 767px) {
-  .h1-projects {
-    font-size: 3rem;
+  .about-container {
+    height: 42em;
+  }
+
+  .h1-about {
+    font-size: 4.6rem;
   }
 
   .project-preview {
+    font-size: 1.8rem;
+  }
+
+  .about-mission,
+  .about-skills-title {
+    font-size: 2rem;
+  }
+
+  .about-skills-title {
+    font-size: 2rem;
+  }
+
+  .about-tech-details {
     font-size: 1.8rem;
   }
 }

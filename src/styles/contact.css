@@ -42,3 +42,9 @@
   /* box-shadow: 1px 1px 5px white; */
   pointer-events: none;
 }
+
+@media only screen and (min-width: 767px) {
+  .contact-container {
+    height: 42em;
+  }
+}

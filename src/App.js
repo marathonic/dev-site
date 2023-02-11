@@ -9,7 +9,15 @@ import Contact from "./components/Contact";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const isTablet = useMediaQuery({ query: "(min-width: 767px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 1224px)" });
+  let bigSize = null;
+  if (isTablet && !isDesktop) {
+    bigSize = 100;
+  } else if (isDesktop) {
+    bigSize = 70;
+  }
+  let dynIconSize = bigSize ? bigSize : 50;
 
   useEffect(() => {
     const toggleOverflow = () => {
@@ -40,9 +48,13 @@ function App() {
       {/* {isSidebarOpen && <MobileSidebar />} */}
       <header className="App-header"></header>
       <Hero />
-      <Projects />
-      <About />
-      <Contact />
+      <Projects isTablet={isTablet} isDesktop={isDesktop} />
+      <About
+        isTablet={isTablet}
+        isDesktop={isDesktop}
+        dynIconSize={dynIconSize}
+      />
+      <Contact isTablet={isTablet} isDesktop={isDesktop} />
     </div>
   );
 }

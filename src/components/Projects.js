@@ -7,7 +7,7 @@ import {
   GiShoppingCart,
 } from "react-icons/gi";
 
-export const Projects = () => {
+export const Projects = ({ isTablet, isDesktop }) => {
   const repos = [
     {
       title: "myAnimeLog",
@@ -48,9 +48,17 @@ export const Projects = () => {
           </span>
           <div className="project-thumbnail-div">
             {/* <img src={repo.img} alt="logo"></img> */}
-            {repo.type === "anime" ? <GiSpellBook size={50} /> : ""}
-            {repo.type === "game" && <GiMagnifyingGlass size={50} />}
-            {repo.type === "ecommerce" && <GiShoppingCart size={50} />}
+            {repo.type === "anime" ? (
+              <GiSpellBook size={isTablet || isDesktop ? 100 : 50} />
+            ) : (
+              ""
+            )}
+            {repo.type === "game" && (
+              <GiMagnifyingGlass size={isTablet || isDesktop ? 100 : 50} />
+            )}
+            {repo.type === "ecommerce" && (
+              <GiShoppingCart size={isTablet || isDesktop ? 100 : 50} />
+            )}
           </div>
         </div>
       </a>
