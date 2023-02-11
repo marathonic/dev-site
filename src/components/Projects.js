@@ -7,7 +7,7 @@ import {
   GiShoppingCart,
 } from "react-icons/gi";
 
-export const Projects = ({ isTablet, isDesktop }) => {
+export const Projects = ({ isTablet, isDesktop, projectsRef }) => {
   const repos = [
     {
       title: "myAnimeLog",
@@ -66,7 +66,7 @@ export const Projects = ({ isTablet, isDesktop }) => {
   });
 
   return (
-    <div className="projects-container">
+    <div className="projects-container" ref={projectsRef}>
       <h1 className="h1-section h1-projects alt-h1-shadow">Featured</h1>
       <div className="mapped-repos-container">{mappedRepos}</div>
     </div>

@@ -1,21 +1,162 @@
-import React, { useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 // import "../yorha.css";
 import "../styles/mobileSidebar.css";
 
-export const MobileSidebar = ({
+export const MobileSidebar = forwardRef(
+  ({ isSidebarOpen, handleSidebarToggle, setIsSidebarOpen }, contactRef) => {
+    const [currentScroll, setCurrentScroll] = useState("home");
+
+    const handleHome = (e) => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      closeWithDelay(e);
+    };
+    const handleContact = (e) => {
+      contactRef?.current.scrollIntoView();
+      closeWithDelay(e);
+    };
+
+    const closeWithDelay = (e) => {
+      let targ = e.target.id;
+      let clicked = targ.substring(3);
+      // let curr = document.querySelector(".current-link");
+      // let currentPage = curr.textContent.toLowerCase();
+      // if (currentPage === clicked) return;
+      if (clicked === currentScroll) return;
+      console.log(clicked);
+      // let curr = document.querySelector(".current-link");
+      // curr?.classList.remove("current-link");
+      setTimeout(() => {
+        setIsSidebarOpen(false);
+        setCurrentScroll(clicked);
+      }, 700);
+      return;
+    };
+
+    return (
+      <>
+        {isSidebarOpen && (
+          <div className="sidebar">
+            <div className="sidebar-container fade-in">
+              <ul className="sidebar-ul" id="shit-id-test">
+                <li className="test-border current-link">
+                  {currentScroll !== "home" && (
+                    <button
+                      className="sidebar-li side-btn"
+                      id="sb-home"
+                      onClick={handleHome}
+                    >
+                      Home
+                    </button>
+                  )}
+                  {currentScroll === "home" && (
+                    <span className="selection-icon">
+                      <button
+                        className="sidebar-li side-btn current-link"
+                        id="sb-home"
+                        onClick={closeWithDelay}
+                      >
+                        Home
+                      </button>
+                    </span>
+                  )}
+                </li>
+                <li className="test-border">
+                  {currentScroll !== "proj" && (
+                    <button
+                      className="sidebar-li side-btn"
+                      id="sb-proj"
+                      onClick={closeWithDelay}
+                    >
+                      Projects
+                    </button>
+                  )}
+                  {currentScroll === "proj" && (
+                    <span className="selection-icon">
+                      <button
+                        className="sidebar-li side-btn current-link"
+                        id="sb-proj"
+                        onClick={closeWithDelay}
+                      >
+                        Projects
+                      </button>
+                    </span>
+                  )}
+                </li>
+                <li className="test-border">
+                  {currentScroll !== "about" && (
+                    <button
+                      className="sidebar-li side-btn"
+                      id="sb-about"
+                      onClick={closeWithDelay}
+                    >
+                      About
+                    </button>
+                  )}
+                  {currentScroll === "about" && (
+                    <span className="selection-icon">
+                      <button
+                        className="sidebar-li side-btn current-link"
+                        id="sb-about"
+                        onClick={closeWithDelay}
+                      >
+                        About
+                      </button>
+                    </span>
+                  )}
+                </li>
+                <li className="test-border">
+                  {currentScroll !== "contact" && (
+                    <button
+                      className="sidebar-li side-btn"
+                      id="sb-contact"
+                      onClick={closeWithDelay}
+                    >
+                      Contact
+                    </button>
+                  )}
+                  {currentScroll === "contact" && (
+                    <span className="selection-icon">
+                      <button
+                        className="sidebar-li side-btn current-link"
+                        id="sb-contact"
+                        onClick={handleContact}
+                      >
+                        Contact
+                      </button>
+                    </span>
+                  )}
+                </li>
+              </ul>
+              <div className="sidebar-contact">
+                <button className="sb-contact-box">Call</button>
+                <button className="sb-contact-box">Message</button>
+              </div>
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
+);
+
+export const MobileSidebar2 = ({
   isSidebarOpen,
   handleSidebarToggle,
   setIsSidebarOpen,
+  projectsRef,
+  aboutRef,
+  contactRef,
 }) => {
   const [currentScroll, setCurrentScroll] = useState("home");
-  // delete this below ~~
-  // const allBtns = document.querySelectorAll(".side-btn");
-  // allBtns?.forEach((btn) => {
-  // btn.addEventListener("click", function (e) {
-  // console.log(e.target.id);
-  // });
-  // });
-  // delete this above ~~~
+
+  const handleHome = (e) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    closeWithDelay(e);
+  };
+  const handleContact = (e) => {
+    contactRef?.current.scrollIntoView();
+    closeWithDelay(e);
+  };
 
   const closeWithDelay = (e) => {
     let targ = e.target.id;
@@ -45,7 +186,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-home"
-                    onClick={closeWithDelay}
+                    onClick={handleHome}
                   >
                     Home
                   </button>
@@ -121,7 +262,7 @@ export const MobileSidebar = ({
                     <button
                       className="sidebar-li side-btn current-link"
                       id="sb-contact"
-                      onClick={closeWithDelay}
+                      onClick={handleContact}
                     >
                       Contact
                     </button>

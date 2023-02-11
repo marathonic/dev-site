@@ -1,7 +1,7 @@
 import { Nav } from "./components/Nav";
 import Hero from "./components/Hero";
 import { useMediaQuery } from "react-responsive";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MobileSidebar } from "./components/MobileSidebar";
 import { Projects } from "./components/Projects";
 import About from "./components/About";
@@ -11,6 +11,9 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const isTablet = useMediaQuery({ query: "(min-width: 767px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 1224px)" });
+  let projectsRef,
+    aboutRef,
+    contactRef = useRef();
   let bigSize = null;
   if (isTablet && !isDesktop) {
     bigSize = 80;
@@ -44,20 +47,29 @@ function App() {
       <MobileSidebar
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
+        projectsRef={projectsRef}
+        aboutRef={aboutRef}
+        contactRef={contactRef}
       />
       {/* {isSidebarOpen && <MobileSidebar />} */}
       <header className="App-header"></header>
       <Hero />
-      <Projects isTablet={isTablet} isDesktop={isDesktop} />
+      <Projects
+        isTablet={isTablet}
+        isDesktop={isDesktop}
+        projectsRef={projectsRef}
+      />
       <About
         isTablet={isTablet}
         isDesktop={isDesktop}
         dynIconSize={dynIconSize}
+        aboutRef={aboutRef}
       />
       <Contact
         isTablet={isTablet}
         isDesktop={isDesktop}
         dynIconSize={dynIconSize}
+        contactRef={contactRef}
       />
     </div>
   );
