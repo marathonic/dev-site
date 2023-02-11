@@ -39,3 +39,19 @@
   right: 0;
   margin-top: 10px;
 }
+
+.nav-desktop-btn {
+  border: transparent;
+  background-color: transparent;
+  color: white;
+}
+
+@media only screen and (min-width: 767px) {
+  .nav-desktop-btn {
+    font-size: 1.4rem;
+  }
+
+  .nav-desktop-btn:hover {
+    cursor: pointer;
+  }
+}

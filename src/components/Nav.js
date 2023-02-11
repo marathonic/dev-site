@@ -25,13 +25,13 @@ export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
       {isDesktop && (
         <ul className="nav-ul">
           <li className="nav-li">
-            <button>Projects</button>
+            <button className="nav-desktop-btn">Projects</button>
           </li>
           <li className="nav-li">
-            <button>Contact</button>
+            <button className="nav-desktop-btn">About</button>
           </li>
           <li className="nav-li">
-            <button>Story</button>
+            <button className="nav-desktop-btn">Contact</button>
           </li>
         </ul>
       )}
