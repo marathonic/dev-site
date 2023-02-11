@@ -13,9 +13,9 @@ function App() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1224px)" });
   let bigSize = null;
   if (isTablet && !isDesktop) {
-    bigSize = 100;
+    bigSize = 80;
   } else if (isDesktop) {
-    bigSize = 70;
+    bigSize = 100;
   }
   let dynIconSize = bigSize ? bigSize : 50;
 
@@ -54,7 +54,11 @@ function App() {
         isDesktop={isDesktop}
         dynIconSize={dynIconSize}
       />
-      <Contact isTablet={isTablet} isDesktop={isDesktop} />
+      <Contact
+        isTablet={isTablet}
+        isDesktop={isDesktop}
+        dynIconSize={dynIconSize}
+      />
     </div>
   );
 }

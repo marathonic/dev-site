@@ -17,6 +17,7 @@
 .contact-description {
   font-size: 1.6rem;
   text-align: center;
+  padding-inline: 0;
 }
 
 .contact-icons {
@@ -46,5 +47,14 @@
 @media only screen and (min-width: 767px) {
   .contact-container {
     height: 42em;
+  }
+
+  .h1-section.h1-contact {
+    font-size: 8rem;
+  }
+
+  .contact-description {
+    font-size: 2.3rem;
+    padding-inline: 150px;
   }
 }

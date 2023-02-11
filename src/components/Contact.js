@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaEnvelope, FaSms } from "react-icons/fa";
 import "../styles/contact.css";
 
-function Contact() {
+function Contact({ dynIconSize }) {
   return (
     <footer className="contact-container">
       <h1 className="h1-section h1-contact">Contact</h1>
@@ -14,15 +14,15 @@ function Contact() {
       </span>
       <span className="contact-icons">
         <a href="https://github.com/marathonic" className="contact-icon-btn">
-          <FaGithub size={50} className="contact-icon" />
+          <FaGithub size={dynIconSize} className="contact-icon" />
           <p>Github</p>
         </a>
         <a href="mailto:marathonic@proton.me" className="contact-icon-btn">
-          <FaEnvelope size={50} className="contact-icon" />
+          <FaEnvelope size={dynIconSize} className="contact-icon" />
           <p>Email</p>
         </a>
         <a href="tel:+522223638615" className="contact-icon-btn">
-          <FaSms size={50} className="contact-icon" />
+          <FaSms size={dynIconSize} className="contact-icon" />
           <p>SMS</p>
         </a>
       </span>
