@@ -3,7 +3,13 @@ import { AiOutlineMenu } from "react-icons/ai";
 import "../styles/nav.css";
 import { MobileBurgerIcon } from "./MobileBurgerIcon";
 
-export const Nav = ({ isDesktop, setIsSidebarOpen, isSidebarOpen }) => {
+export const Nav = ({
+  isDesktop,
+  setIsSidebarOpen,
+  isSidebarOpen,
+  currentScroll,
+  setCurrentScroll,
+}) => {
   const handleSidebarToggle = () => {
     const sidebarContainer = document.querySelector(".sidebar-container");
     if (isSidebarOpen && !sidebarContainer?.classList.contains("fade-out")) {

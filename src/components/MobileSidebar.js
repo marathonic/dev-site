@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import "../yorha.css";
 import "../styles/mobileSidebar.css";
 
@@ -23,6 +23,25 @@ export const MobileSidebar = ({
     return;
   };
 
+  const handleHome = (e) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    closeWithDelay(e);
+  };
+
+  const handleProjects = (e) => {
+    let projectsSection = document.querySelector("#projects-id");
+    projectsSection?.scrollIntoView({ block: "center", behavior: "smooth" });
+    closeWithDelay(e);
+  };
+  // ---------------++++++++++++++++++++++++++++++++++++++ should we delete this useEffect? Try both ways
+  useEffect(() => {
+    setCurrentScroll("home");
+    // eslint-disable-next-line
+  }, []);
+
+  // uhhhhhh what? the console says the current scroll is home, and then it says it's proj
+  console.log(currentScroll);
+
   return (
     <>
       {isSidebarOpen && (
@@ -34,7 +53,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-home"
-                    onClick={closeWithDelay}
+                    onClick={handleHome}
                   >
                     Home
                   </button>
@@ -56,7 +75,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-proj"
-                    onClick={closeWithDelay}
+                    onClick={handleProjects}
                   >
                     Projects
                   </button>

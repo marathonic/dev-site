@@ -84,7 +84,7 @@ export const Projects = ({
   });
 
   return (
-    <div className="projects-container" ref={projectsRef}>
+    <div className="projects-container" ref={projectsRef} id="projects-id">
       <h1 className="h1-section h1-projects alt-h1-shadow">Featured</h1>
       <div className="mapped-repos-container">{mappedRepos}</div>
     </div>

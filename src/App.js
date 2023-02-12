@@ -36,12 +36,18 @@ function App() {
     toggleOverflow();
   }, [isSidebarOpen]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="App">
       <Nav
         isDesktop={isDesktop}
         setIsSidebarOpen={setIsSidebarOpen}
         isSidebarOpen={isSidebarOpen}
+        currentScroll={currentScroll}
+        setCurrentScroll={setCurrentScroll}
       />
       <MobileSidebar
         isSidebarOpen={isSidebarOpen}

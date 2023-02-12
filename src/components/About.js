@@ -24,22 +24,27 @@ function About({
   // I think we can make use of the ref here to pass in a state from App.js as prop to the MobileSidebar,
   // and then we can read that value here and conditionally scrollIntoView() to the aboutRef, then repeat that for all components.
 
+  // useEffect(() => {
+  // if(currentScroll === "about") {
+  //
+  // }
+  // }, [currentScroll])
+
   // Not working, just copy the Contact.js and Projects.js way
 
-  useEffect(() => {
-    if (currentScroll === "about" && aboutInView) return;
-    if (currentScroll === "about" && !aboutInView) {
-      aboutRef?.current?.scrollIntoView({
-        block: "start",
-        inline: "nearest",
-        behavior: "smooth",
-      });
-    }
-
-    if (aboutInView) {
-      setCurrentScroll("about");
-    }
-  }, [aboutInView, currentScroll]);
+  // useEffect(() => {
+  // if (currentScroll === "about" && aboutInView) return;
+  // if (currentScroll === "about" && !aboutInView) {
+  // aboutRef?.current?.scrollIntoView({
+  // block: "start",
+  // behavior: "smooth",
+  // });
+  // }
+  //
+  // if (aboutInView) {
+  // setCurrentScroll("about");
+  // }
+  // }, [aboutInView, currentScroll]);
 
   return (
     <section className="about-container">
