@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/about.css";
 import {
   IoLogoJavascript,
@@ -6,9 +6,40 @@ import {
   IoLogoHtml5,
   IoLogoReact,
 } from "react-icons/io5";
+import { useInView } from "react-intersection-observer";
 
-function About({ isTablet, isDesktop, dynIconSize }) {
+function About({
+  isTablet,
+  isDesktop,
+  dynIconSize,
+  setCurrentScroll,
+  currentScroll,
+}) {
   let adaptiveSize = isTablet || isDesktop ? 100 : 70;
+  const [aboutRef, aboutInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.8,
+  });
+
+  // I think we can make use of the ref here to pass in a state from App.js as prop to the MobileSidebar,
+  // and then we can read that value here and conditionally scrollIntoView() to the aboutRef, then repeat that for all components.
+
+  // Not working, just copy the Contact.js and Projects.js way
+
+  useEffect(() => {
+    if (currentScroll === "about" && aboutInView) return;
+    if (currentScroll === "about" && !aboutInView) {
+      aboutRef?.current?.scrollIntoView({
+        block: "start",
+        inline: "nearest",
+        behavior: "smooth",
+      });
+    }
+
+    if (aboutInView) {
+      setCurrentScroll("about");
+    }
+  }, [aboutInView, currentScroll]);
 
   return (
     <section className="about-container">

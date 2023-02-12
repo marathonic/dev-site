@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import songoku from "../assets/GokuBgTransparentBg2.png";
 
 // const Goku = new Image();
 // Goku.src = "test-folder/GokuTransparentBg.jpg";
 
-const Hero = () => {
+const Hero = ({ currentScroll, setCurrentScroll }) => {
+  const [homeRef, homeInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.8,
+  });
+
+  useEffect(() => {
+    if (currentScroll === "home") return;
+    if (homeInView) {
+      setCurrentScroll("home");
+    }
+    // eslint-disable-next-line
+  }, [homeInView]);
+
   return (
-    <main className="splash">
+    <main className="splash" ref={homeRef}>
       <div className="hero">
         <h1 className="hero-h1 with-shadow">Hello</h1>
         {/* <h1 className="hero-h1 with-shadow">world</h1> */}

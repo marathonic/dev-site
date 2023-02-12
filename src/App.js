@@ -51,12 +51,19 @@ function App() {
       />
       {/* {isSidebarOpen && <MobileSidebar />} */}
       <header className="App-header"></header>
-      <Hero />
-      <Projects isTablet={isTablet} isDesktop={isDesktop} />
+      <Hero setCurrentScroll={setCurrentScroll} currentScroll={currentScroll} />
+      <Projects
+        isTablet={isTablet}
+        isDesktop={isDesktop}
+        setCurrentScroll={setCurrentScroll}
+        currentScroll={currentScroll}
+      />
       <About
         isTablet={isTablet}
         isDesktop={isDesktop}
         dynIconSize={dynIconSize}
+        setCurrentScroll={setCurrentScroll}
+        currentScroll={currentScroll}
       />
       <Contact
         isTablet={isTablet}

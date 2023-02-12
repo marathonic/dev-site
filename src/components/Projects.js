@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/projects.css";
 import { useInView } from "react-intersection-observer";
 import {
@@ -8,11 +8,23 @@ import {
   GiShoppingCart,
 } from "react-icons/gi";
 
-export const Projects = ({ isTablet, isDesktop }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.7,
+export const Projects = ({
+  isTablet,
+  isDesktop,
+  setCurrentScroll,
+  currentScroll,
+}) => {
+  const [projectsRef, projectsInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.9,
   });
+
+  useEffect(() => {
+    if (currentScroll === "proj") return;
+    if (projectsInView) {
+      setCurrentScroll("proj");
+    }
+  }, [projectsInView]);
 
   const repos = [
     {
@@ -72,7 +84,7 @@ export const Projects = ({ isTablet, isDesktop }) => {
   });
 
   return (
-    <div className="projects-container">
+    <div className="projects-container" ref={projectsRef}>
       <h1 className="h1-section h1-projects alt-h1-shadow">Featured</h1>
       <div className="mapped-repos-container">{mappedRepos}</div>
     </div>
