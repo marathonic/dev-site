@@ -46,6 +46,8 @@ function App() {
       <MobileSidebar
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
+        currentScroll={currentScroll}
+        setCurrentScroll={setCurrentScroll}
       />
       {/* {isSidebarOpen && <MobileSidebar />} */}
       <header className="App-header"></header>

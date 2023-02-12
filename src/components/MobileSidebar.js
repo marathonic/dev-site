@@ -6,9 +6,9 @@ export const MobileSidebar = ({
   isSidebarOpen,
   handleSidebarToggle,
   setIsSidebarOpen,
+  currentScroll,
+  setCurrentScroll,
 }) => {
-  const [currentScroll, setCurrentScroll] = useState("home");
-
   const closeWithDelay = (e) => {
     let targ = e.target.id;
     let clicked = targ.substring(3);
