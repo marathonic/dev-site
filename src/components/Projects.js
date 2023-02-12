@@ -14,6 +14,8 @@ export const Projects = ({
   setCurrentScroll,
   currentScroll,
 }) => {
+  // ++++++++++++ EXCELLENT!!! This works, now just implement the same logic for the other sections
+
   const [projectsRef, projectsInView] = useInView({
     triggerOnce: false,
     threshold: 0.9,
