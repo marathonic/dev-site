@@ -8,25 +8,14 @@ export const MobileSidebar = ({
   setIsSidebarOpen,
 }) => {
   const [currentScroll, setCurrentScroll] = useState("home");
-  // delete this below ~~
-  // const allBtns = document.querySelectorAll(".side-btn");
-  // allBtns?.forEach((btn) => {
-  // btn.addEventListener("click", function (e) {
-  // console.log(e.target.id);
-  // });
-  // });
-  // delete this above ~~~
 
   const closeWithDelay = (e) => {
     let targ = e.target.id;
     let clicked = targ.substring(3);
-    // let curr = document.querySelector(".current-link");
-    // let currentPage = curr.textContent.toLowerCase();
-    // if (currentPage === clicked) return;
+
     if (clicked === currentScroll) return;
     console.log(clicked);
-    // let curr = document.querySelector(".current-link");
-    // curr?.classList.remove("current-link");
+
     setTimeout(() => {
       setIsSidebarOpen(false);
       setCurrentScroll(clicked);

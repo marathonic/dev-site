@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import { FaGithub, FaEnvelope, FaSms } from "react-icons/fa";
 import "../styles/contact.css";
 
-function Contact({ dynIconSize }) {
+function Contact({ dynIconSize, setCurrentScroll, currentScroll }) {
+  const [contactRef, contactInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.9,
+  });
+  console.log(contactInView);
+
+  // debounce scroll listener?
+
+  useEffect(() => {
+    if (currentScroll === "contact") return;
+    setCurrentScroll("contact");
+    // eslint-disable-next-line
+  }, [contactInView]);
+
   return (
-    <footer className="contact-container">
+    <footer className="contact-container" ref={contactRef}>
       <h1 className="h1-section h1-contact">Contact</h1>
       <span className="contact-description">
         <p>

@@ -8,6 +8,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 
 function App() {
+  const [currentScroll, setCurrentScroll] = useState("home");
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const isTablet = useMediaQuery({ query: "(min-width: 767px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 1224px)" });
@@ -58,6 +60,8 @@ function App() {
         isTablet={isTablet}
         isDesktop={isDesktop}
         dynIconSize={dynIconSize}
+        setCurrentScroll={setCurrentScroll}
+        currentScroll={currentScroll}
       />
     </div>
   );

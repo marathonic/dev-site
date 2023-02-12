@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/projects.css";
+import { useInView } from "react-intersection-observer";
 import {
   GiBroadsword,
   GiSpellBook,
@@ -8,6 +9,11 @@ import {
 } from "react-icons/gi";
 
 export const Projects = ({ isTablet, isDesktop }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.7,
+  });
+
   const repos = [
     {
       title: "myAnimeLog",
