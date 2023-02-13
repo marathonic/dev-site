@@ -18,8 +18,16 @@ function About({
   let adaptiveSize = isTablet || isDesktop ? 100 : 70;
   const [aboutRef, aboutInView] = useInView({
     triggerOnce: false,
-    threshold: 0.8,
+    threshold: 0.9,
   });
+
+  useEffect(() => {
+    if (currentScroll === "about") return;
+    if (aboutInView) {
+      setCurrentScroll("about");
+    }
+    // eslint-disable-next-line
+  }, [aboutInView]);
 
   // I think we can make use of the ref here to pass in a state from App.js as prop to the MobileSidebar,
   // and then we can read that value here and conditionally scrollIntoView() to the aboutRef, then repeat that for all components.
@@ -47,7 +55,7 @@ function About({
   // }, [aboutInView, currentScroll]);
 
   return (
-    <section className="about-container">
+    <section className="about-container" ref={aboutRef}>
       <h1 className="h1-section h1-about">About</h1>
       <span className="about-description">
         <div className="dev-stack-icons">
