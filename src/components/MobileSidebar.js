@@ -8,6 +8,7 @@ export const MobileSidebar = ({
   setIsSidebarOpen,
   currentScroll,
   setCurrentScroll,
+  scrollToSection,
 }) => {
   const closeWithDelay = (e) => {
     let targ = e.target.id;
@@ -49,14 +50,6 @@ export const MobileSidebar = ({
   // closeWithDelay(e);
   // }
 
-  const scrollToSection = (e) => {
-    let nameOfDOMSection = e.target.id.substring(3).toLowerCase();
-    console.log("NAME OF DOM SECTION", "==>", nameOfDOMSection);
-    let sectionElement = document.querySelector(`#${nameOfDOMSection}-id`);
-    sectionElement?.scrollIntoView({ block: "center", behavior: "smooth" });
-    closeWithDelay(e);
-  };
-
   const handleProjects = (e) => {
     let projectsSection = document.querySelector("#projects-id");
     projectsSection?.scrollIntoView({ block: "center", behavior: "smooth" });
@@ -83,7 +76,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-home"
-                    onClick={handleHome}
+                    onClick={(e) => scrollToSection(e, closeWithDelay)}
                   >
                     Home
                   </button>
@@ -105,7 +98,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-proj"
-                    onClick={scrollToSection}
+                    onClick={(e) => scrollToSection(e, closeWithDelay)}
                   >
                     Projects
                   </button>
@@ -127,7 +120,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-about"
-                    onClick={scrollToSection}
+                    onClick={(e) => scrollToSection(e, closeWithDelay)}
                   >
                     About
                   </button>
@@ -149,7 +142,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-contact"
-                    onClick={scrollToSection}
+                    onClick={(e) => scrollToSection(e, closeWithDelay)}
                   >
                     Contact
                   </button>

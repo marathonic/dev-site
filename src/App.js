@@ -21,6 +21,21 @@ function App() {
   }
   let dynIconSize = bigSize ? bigSize : 50;
 
+  const scrollToSection = (e, cb) => {
+    let nameOfDOMSection = e.target.id.substring(3).toLowerCase();
+    console.log("NAME OF DOM SECTION", "==>", nameOfDOMSection);
+    if (nameOfDOMSection === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      cb(e);
+      // return;
+    }
+    let sectionElement = document.querySelector(`#${nameOfDOMSection}-id`);
+    sectionElement?.scrollIntoView({ block: "center", behavior: "smooth" });
+    if (cb) {
+      cb(e);
+    }
+  };
+
   useEffect(() => {
     const toggleOverflow = () => {
       let body = document.body;
@@ -48,12 +63,14 @@ function App() {
         isSidebarOpen={isSidebarOpen}
         currentScroll={currentScroll}
         setCurrentScroll={setCurrentScroll}
+        scrollToSection={scrollToSection}
       />
       <MobileSidebar
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
         currentScroll={currentScroll}
         setCurrentScroll={setCurrentScroll}
+        scrollToSection={scrollToSection}
       />
       {/* {isSidebarOpen && <MobileSidebar />} */}
       <header className="App-header"></header>

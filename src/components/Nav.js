@@ -9,6 +9,7 @@ export const Nav = ({
   isSidebarOpen,
   currentScroll,
   setCurrentScroll,
+  scrollToSection,
 }) => {
   const handleSidebarToggle = () => {
     const sidebarContainer = document.querySelector(".sidebar-container");
@@ -31,13 +32,40 @@ export const Nav = ({
       {isDesktop && (
         <ul className="nav-ul">
           <li className="nav-li">
-            <button className="nav-desktop-btn">Projects</button>
+            <button
+              className="nav-desktop-btn"
+              id="nv-home"
+              onClick={scrollToSection}
+            >
+              Home
+            </button>
           </li>
           <li className="nav-li">
-            <button className="nav-desktop-btn">About</button>
+            <button
+              className="nav-desktop-btn"
+              id="nv-proj"
+              onClick={scrollToSection}
+            >
+              Projects
+            </button>
           </li>
           <li className="nav-li">
-            <button className="nav-desktop-btn">Contact</button>
+            <button
+              className="nav-desktop-btn"
+              id="nv-about"
+              onClick={scrollToSection}
+            >
+              About
+            </button>
+          </li>
+          <li className="nav-li">
+            <button
+              className="nav-desktop-btn"
+              id="nv-contact"
+              onClick={scrollToSection}
+            >
+              Contact
+            </button>
           </li>
         </ul>
       )}

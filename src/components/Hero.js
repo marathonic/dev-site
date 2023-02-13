@@ -20,7 +20,7 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
   }, [homeInView]);
 
   return (
-    <main className="splash" ref={homeRef}>
+    <main className="splash" ref={homeRef} id="home-id">
       <div className="hero">
         <h1 className="hero-h1 with-shadow">Hello</h1>
         {/* <h1 className="hero-h1 with-shadow">world</h1> */}
