@@ -22,18 +22,20 @@ function App() {
   let dynIconSize = bigSize ? bigSize : 50;
 
   const scrollToSection = (e, cb) => {
-    let nameOfDOMSection = e.target.id.substring(3).toLowerCase();
-    console.log("NAME OF DOM SECTION", "==>", nameOfDOMSection);
-    if (nameOfDOMSection === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      cb(e);
-      // return;
-    }
-    let sectionElement = document.querySelector(`#${nameOfDOMSection}-id`);
-    sectionElement?.scrollIntoView({ block: "center", behavior: "smooth" });
-    if (cb) {
-      cb(e);
-    }
+    setTimeout(() => {
+      let nameOfDOMSection = e.target.id.substring(3).toLowerCase();
+      console.log("NAME OF DOM SECTION", "==>", nameOfDOMSection);
+      if (nameOfDOMSection === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        cb(e);
+        return;
+      }
+      let sectionElement = document.querySelector(`#${nameOfDOMSection}-id`);
+      sectionElement?.scrollIntoView({ block: "center", behavior: "smooth" });
+      if (cb) {
+        cb(e);
+      }
+    }, 200);
   };
 
   useEffect(() => {

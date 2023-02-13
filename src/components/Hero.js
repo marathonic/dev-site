@@ -12,12 +12,18 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
   });
 
   useEffect(() => {
-    if (currentScroll === "home") return;
-    if (homeInView) {
+    setTimeout(() => {
       setCurrentScroll("home");
-    }
-    // eslint-disable-next-line
-  }, [homeInView]);
+    }, 100);
+  }, []);
+
+  // useEffect(() => {
+  // if (currentScroll === "home") return;
+  // if (homeInView) {
+  // setCurrentScroll("home");
+  // }
+  // eslint-disable-next-line
+  // }, [homeInView]);
 
   return (
     <main className="splash" ref={homeRef} id="home-id">
