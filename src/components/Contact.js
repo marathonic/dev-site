@@ -8,7 +8,7 @@ function Contact({ dynIconSize, setCurrentScroll, currentScroll }) {
     triggerOnce: false,
     threshold: 0.9,
   });
-  console.log(contactInView);
+  // console.log(contactInView);
 
   // debounce scroll listener?
 
@@ -23,7 +23,7 @@ function Contact({ dynIconSize, setCurrentScroll, currentScroll }) {
   }, [contactInView]);
 
   return (
-    <footer className="contact-container" ref={contactRef}>
+    <footer className="contact-container" ref={contactRef} id="contact-id">
       <h1 className="h1-section h1-contact">Contact</h1>
       <span className="contact-description">
         <p>

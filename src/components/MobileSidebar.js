@@ -28,11 +28,41 @@ export const MobileSidebar = ({
     closeWithDelay(e);
   };
 
+  // we could also create a const scrollToSection = (e) => {
+  // let sectionClicked = e.target.id.substring(3).toLowerCase();
+  // switch (sectionClicked) {
+  // case 'projects':
+  //
+  // break;
+  //
+  // default:
+  // break;
+  // }
+  // ++++++ OR, alternatively:
+  // just give the container elements ids that are the same as the sb-link button names,
+  //  so the container of the projects section would be: #proj-id, and the button's in the sidebar would be #sb-proj;
+  //  WE WANT TO REMOVE THE LAST 3 CHARACTERS FROM THE RIGHT, WHICH ARE ALWAYS "-id", is substring the right way?
+  // let btnClicked = e.target.id;
+  // let nameOfDOMSection = e.target.id <this gives us the button id, we'll get the section's id like so...: > .substring(3).toLowerCase();
+  //  let sectionElement = document.querySelector(#`${nameOfDOMSection}`);
+  //  sectionElement?.scrollIntoView({block: "center", behavior: "smooth"});
+  // closeWithDelay(e);
+  // }
+
+  const scrollToSection = (e) => {
+    let nameOfDOMSection = e.target.id.substring(3).toLowerCase();
+    console.log("NAME OF DOM SECTION", "==>", nameOfDOMSection);
+    let sectionElement = document.querySelector(`#${nameOfDOMSection}-id`);
+    sectionElement?.scrollIntoView({ block: "center", behavior: "smooth" });
+    closeWithDelay(e);
+  };
+
   const handleProjects = (e) => {
     let projectsSection = document.querySelector("#projects-id");
     projectsSection?.scrollIntoView({ block: "center", behavior: "smooth" });
     closeWithDelay(e);
   };
+
   // ---------------++++++++++++++++++++++++++++++++++++++ should we delete this useEffect? Try both ways
   useEffect(() => {
     setCurrentScroll("home");
@@ -75,7 +105,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-proj"
-                    onClick={handleProjects}
+                    onClick={scrollToSection}
                   >
                     Projects
                   </button>
@@ -97,7 +127,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-about"
-                    onClick={closeWithDelay}
+                    onClick={scrollToSection}
                   >
                     About
                   </button>
@@ -119,7 +149,7 @@ export const MobileSidebar = ({
                   <button
                     className="sidebar-li side-btn"
                     id="sb-contact"
-                    onClick={closeWithDelay}
+                    onClick={scrollToSection}
                   >
                     Contact
                   </button>

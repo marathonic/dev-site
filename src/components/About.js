@@ -55,7 +55,7 @@ function About({
   // }, [aboutInView, currentScroll]);
 
   return (
-    <section className="about-container" ref={aboutRef}>
+    <section className="about-container" ref={aboutRef} id="about-id">
       <h1 className="h1-section h1-about">About</h1>
       <span className="about-description">
         <div className="dev-stack-icons">
