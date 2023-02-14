@@ -160,10 +160,6 @@ export const MobileSidebar = ({
                 )}
               </li>
             </ul>
-            <div className="sidebar-contact">
-              <button className="sb-contact-box">Call</button>
-              <button className="sb-contact-box">Message</button>
-            </div>
           </div>
         </div>
       )}

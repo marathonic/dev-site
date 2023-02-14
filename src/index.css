@@ -82,12 +82,56 @@ h1.with-shadow {
 
 .hero {
   text-align: center;
+  min-height: 42rem;
+  max-height: 42rem;
 }
 
-.goku-hero {
+.goku-hero,
+.breathing-circle {
   max-width: 300px;
   padding-bottom: 42%;
   border-bottom: solid 2px white;
+}
+
+.breathing-circle-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breathing-circle {
+  /* color: transparent; */
+  /* position: absolute; */
+  /* top: -27%; */
+  /* left: 50%; */
+  color: black;
+  width: 170px;
+  height: 33px;
+  border-radius: 50%;
+  /* background: transparent; */
+  border: dashed 1px #132743;
+  margin-bottom: 100%;
+  animation: breathe ease-in-out infinite 9s;
+}
+
+.breathe-text {
+  font-size: 1rem;
+  position: absolute;
+  margin-top: -80%;
+  opacity: 100%;
+  transition: all 8s;
+}
+
+.breathe-text:hover {
+  font-size: 2rem;
+  opacity: 0%;
+}
+
+.breathe-text:hover:after {
+  font-size: 1rem;
+  /* color: transparent; */
 }
 
 .hero-h1 {
@@ -118,13 +162,39 @@ h1.with-shadow {
   margin-bottom: 0;
 }
 
+@keyframes breathe {
+  0% {
+    width: 170px;
+    height: 33px;
+  }
+
+  50% {
+    width: 409px;
+    height: 169px;
+  }
+
+  100% {
+    width: 170px;
+    height: 33px;
+  }
+}
+
 @font-face {
   font-family: Quicksand;
   src: url("./assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
 
 @media only screen and (min-width: 767px) {
+  .hero {
+    height: 100%;
+    min-height: 56rem;
+  }
+
   .hero-h1 {
     font-size: 10rem;
+  }
+
+  .breathing-circle {
+    margin-top: 33%;
   }
 }
