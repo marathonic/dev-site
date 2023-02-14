@@ -113,7 +113,8 @@ h1.with-shadow {
   /* background: transparent; */
   border: dashed 1px #132743;
   margin-bottom: 100%;
-  animation: breathe ease-in-out infinite 9s;
+  animation: breathe478 ease-in-out infinite 21s;
+  animation-iteration-count: 3;
 }
 
 .breathe-text {
@@ -178,6 +179,33 @@ h1.with-shadow {
     height: 33px;
   }
 }
+
+@keyframes breathe478 {
+  0% {
+    width: 170px;
+    height: 33px;
+  }
+
+  21% {
+    width: 409px;
+    height: 169px;
+  }
+
+  57% {
+    width: 409px;
+    height: 169px;
+  }
+
+  100% {
+    width: 170px;
+    height: 33px;
+  }
+}
+
+/* 19 seconds */
+/* 4 seconds inhalation: 0% to 21% */
+/* 7 seconds hold: 21% to 57% ? */
+/* 8 second exhalation: 57% to 100% ? */
 
 @font-face {
   font-family: Quicksand;

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import songoku from "../assets/GokuBgTransparentBg2.png";
 
@@ -6,6 +6,10 @@ import songoku from "../assets/GokuBgTransparentBg2.png";
 // Goku.src = "test-folder/GokuTransparentBg.jpg";
 
 const Hero = ({ currentScroll, setCurrentScroll }) => {
+  const [timerCount, setTimerCount] = useState(4);
+  const [timerSecondRound, setTimerSecondRound] = useState(false);
+  const [timerThirdRound, setTimerThirdRound] = useState(false);
+  const [timerCountActive, setTimerCountActive] = useState(true);
   const [homeRef, homeInView] = useInView({
     triggerOnce: false,
     threshold: 0.8,
@@ -16,6 +20,25 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
       setCurrentScroll("home");
     }, 100);
   }, []);
+
+  useEffect(() => {
+    // +++++++++++++++++++++++++++++++++++++ CONTINUE HERE!!!
+    // WORKS FOR 3 ROUNDS, yet still keeps going, starting at 8. Find a way to stop at the last cycle, so that the countdown from 8 will stop at 0
+    // if(timerThirdRound && timerCount === 1) {}
+    if (timerThirdRound && timerCount === 0) {
+      setTimerSecondRound(false);
+      setTimerCount(8);
+    }
+    if (timerThirdRound && timerCount === 1) {
+      setTimerCountActive(false);
+    }
+    timerCount > 0 && setTimeout(() => setTimerCount(timerCount - 1), 1000);
+    if (timerCountActive && timerCount === 0) {
+      setTimerCount(7);
+      setTimerThirdRound(true);
+    }
+    // timerCountActive && timerCount === 0 && setTimeout(() => setTimerCount )
+  }, [timerCount]);
 
   useEffect(() => {
     if (currentScroll === "home") return;
@@ -42,6 +65,7 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
         <div className="breathing-circle-container">
           <div className="breathing-circle"></div>
           <span className="breathe-text">BREATHE</span>
+          <p>{timerCount}</p>
         </div>
         {/* {`${Goku}`} */}
         {/* <img
