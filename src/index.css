@@ -91,7 +91,8 @@ h1.with-shadow {
 }
 
 .goku-hero,
-.breathing-circle {
+.breathing-circle,
+.static-circle {
   max-width: 300px;
   padding-bottom: 42%;
   border-bottom: solid 2px white;
@@ -105,7 +106,8 @@ h1.with-shadow {
   align-items: center;
 }
 
-.breathing-circle {
+.breathing-circle,
+.static-circle {
   /* color: transparent; */
   /* position: absolute; */
   /* top: -27%; */
@@ -117,11 +119,15 @@ h1.with-shadow {
   /* background: transparent; */
   border: dashed 1px #132743;
   margin-bottom: 100%;
+}
+
+.breathing-circle {
   animation: breathe478 ease-in-out infinite 21s;
   animation-iteration-count: 1;
 }
 
-.breathe-text {
+.breathe-text,
+.breathe-btn {
   font-size: 1rem;
   position: absolute;
   margin-top: -80%;
@@ -132,6 +138,14 @@ h1.with-shadow {
 .breathe-text:hover {
   font-size: 2rem;
   opacity: 0%;
+}
+
+.breathe-btn {
+  border: transparent;
+  background: transparent;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .breathe-text:hover:after {
