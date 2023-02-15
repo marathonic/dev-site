@@ -16,24 +16,54 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
   });
 
   useEffect(() => {
+    let inhale = document.querySelector(".breathe-inhale");
+
+    let hold = document.querySelector(".breathe-hold");
+
+    let exhale = document.querySelector(".breathe-exhale");
+
     setTimeout(() => {
       setCurrentScroll("home");
     }, 100);
+
+    setTimeout(() => {
+      inhale?.classList.add("hide");
+
+      hold?.classList.remove("hide");
+    }, 4000);
+
+    setTimeout(() => {
+      // let hold = document.querySelector('.breathe-hold')
+      hold?.classList.add("hide");
+
+      exhale?.classList.remove("hide");
+    }, 11000);
+
+    setTimeout(() => {
+      exhale?.classList.add("hide");
+    }, 19900);
+
+    setTimeout(() => {
+      let count = document.querySelector(".timer-count");
+      count.classList.add("hide");
+    }, 20000);
   }, []);
 
   useEffect(() => {
     // +++++++++++++++++++++++++++++++++++++ CONTINUE HERE!!!
     // WORKS FOR 3 ROUNDS, yet still keeps going, starting at 8. Find a way to stop at the last cycle, so that the countdown from 8 will stop at 0
     // if(timerThirdRound && timerCount === 1) {}
-    if (timerThirdRound && timerCount === 0) {
+    if (timerThirdRound && timerCount === 0 && timerCountActive) {
       setTimerSecondRound(false);
       setTimerCount(8);
-    }
-    if (timerThirdRound && timerCount === 1) {
       setTimerCountActive(false);
+      console.log("set timer count to false");
     }
+    // if (timerThirdRound && timerCount === 1) {
+    // setTimerCountActive(false);
+    // }
     timerCount > 0 && setTimeout(() => setTimerCount(timerCount - 1), 1000);
-    if (timerCountActive && timerCount === 0) {
+    if (timerCountActive && timerCount === 0 && !timerThirdRound) {
       setTimerCount(7);
       setTimerThirdRound(true);
     }
@@ -64,8 +94,12 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
         {/* <img src={songoku} alt="" className="goku-hero" /> */}
         <div className="breathing-circle-container">
           <div className="breathing-circle"></div>
-          <span className="breathe-text">BREATHE</span>
-          <p>{timerCount}</p>
+          <span className="breathe-text">
+            <p className="breathe-inhale">INHALE</p>
+            <p className="breathe-hold hide">HOLD</p>
+            <p className="breathe-exhale hide">EXHALE</p>
+          </span>
+          <p className="timer-count">{timerCount}</p>
         </div>
         {/* {`${Goku}`} */}
         {/* <img

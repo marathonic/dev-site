@@ -86,6 +86,10 @@ h1.with-shadow {
   max-height: 42rem;
 }
 
+.hide {
+  display: none;
+}
+
 .goku-hero,
 .breathing-circle {
   max-width: 300px;
@@ -114,7 +118,7 @@ h1.with-shadow {
   border: dashed 1px #132743;
   margin-bottom: 100%;
   animation: breathe478 ease-in-out infinite 21s;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
 }
 
 .breathe-text {
