@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import songoku from "../assets/GokuBgTransparentBg2.png";
+import { FaRegHeart } from "react-icons/fa";
 
 // const Goku = new Image();
 // Goku.src = "test-folder/GokuTransparentBg.jpg";
@@ -12,6 +13,11 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
   const [timerCountActive, setTimerCountActive] = useState(true);
   const [isBreatheActive, setIsBreatheActive] = useState(false);
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+  const [hasBeenVisited, setHasBeenVisited] = useState(() => {
+    const visitStatus = sessionStorage.getItem("hasBeenVisited");
+    const visitedVal = JSON.parse(visitStatus);
+    return visitedVal || false;
+  });
   const [homeRef, homeInView] = useInView({
     triggerOnce: false,
     threshold: 0.8,
@@ -50,6 +56,7 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
       let count = document.querySelector(".timer-count");
       count.classList.add("hide");
       setIsAnimationComplete(true);
+      setHasBeenVisited(sessionStorage.setItem("hasBeenVisited", true));
     }, 20000);
   };
 
@@ -80,10 +87,10 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
       exhale?.classList.add("hide");
     }, 19900);
 
-    setTimeout(() => {
-      let count = document.querySelector(".timer-count");
-      count.classList.add("hide");
-    }, 20000);
+    // setTimeout(() => {
+    // let count = document.querySelector(".timer-count");
+    // count.classList.add("hide");
+    // }, 20000);
   }, [isBreatheActive]);
   //
   useEffect(() => {
@@ -133,13 +140,15 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
 
         {/* <img src={songoku} alt="" className="goku-hero" /> */}
         <div className="breathing-circle-container">
-          {!isAnimationComplete && (
+          {!isAnimationComplete && !hasBeenVisited && (
             <div
               className={isBreatheActive ? "breathing-circle" : "static-circle"}
             ></div>
           )}
-          {isAnimationComplete && <div className="post-circle"></div>}
-          {!isBreatheActive && (
+          {isAnimationComplete && hasBeenVisited && (
+            <div className="post-circle"></div>
+          )}
+          {!isBreatheActive && !hasBeenVisited && (
             <button className="breathe-btn" onClick={breathe}>
               Breathe
             </button>
@@ -152,6 +161,7 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
             </span>
           )}
           {isBreatheActive && <p className="timer-count">{timerCount}</p>}
+          {hasBeenVisited && <FaRegHeart size={200} color="gray" />}
         </div>
         {/* {`${Goku}`} */}
         {/* <img
