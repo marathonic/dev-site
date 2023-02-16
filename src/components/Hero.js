@@ -145,9 +145,9 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
               className={isBreatheActive ? "breathing-circle" : "static-circle"}
             ></div>
           )}
-          {isAnimationComplete && hasBeenVisited && (
-            <div className="post-circle"></div>
-          )}
+          {/* {isAnimationComplete && hasBeenVisited && (
+            <div className="static-circle"></div>
+          )} */}
           {!isBreatheActive && !hasBeenVisited && (
             <button className="breathe-btn" onClick={breathe}>
               Breathe
@@ -161,7 +161,11 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
             </span>
           )}
           {isBreatheActive && <p className="timer-count">{timerCount}</p>}
-          {hasBeenVisited && <FaRegHeart size={200} color="gray" />}
+          {hasBeenVisited && (
+            <div className="post-circle">
+              <div className="smile-circle"></div>
+            </div>
+          )}
         </div>
         {/* {`${Goku}`} */}
         {/* <img

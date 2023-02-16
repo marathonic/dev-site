@@ -8,6 +8,8 @@
   background-color: #8e8974;
   /* background-color: var(--darkText); */
 
+  z-index: 99;
+
   color: white;
   color: #e3e3e3;
   font-size: 1.2rem;

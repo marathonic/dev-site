@@ -134,7 +134,26 @@ h1.with-shadow {
 }
 
 .post-circle {
-  opacity: 30%;
+  opacity: 100%;
+}
+
+.smile-circle {
+  width: 100px;
+  height: 76px;
+  /* padding: 10px; */
+  border-bottom: solid black 1px;
+  margin-top: 30px;
+  border-radius: 50%;
+  margin-left: 35px;
+  translate: all 1s;
+}
+
+.smile-circle:hover {
+  width: 100px;
+  height: 46px;
+  /* padding: 10px; */
+  border-bottom: solid black 1px;
+  /* margin-top: 60px; */
 }
 
 .breathe-text,
