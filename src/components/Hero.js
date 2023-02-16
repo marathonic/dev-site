@@ -11,6 +11,7 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
   const [timerThirdRound, setTimerThirdRound] = useState(false);
   const [timerCountActive, setTimerCountActive] = useState(true);
   const [isBreatheActive, setIsBreatheActive] = useState(false);
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const [homeRef, homeInView] = useInView({
     triggerOnce: false,
     threshold: 0.8,
@@ -45,10 +46,11 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
     // exhale?.classList.add("hide");
     // }, 19900);
     //
-    // setTimeout(() => {
-    // let count = document.querySelector(".timer-count");
-    // count.classList.add("hide");
-    // }, 20000);
+    setTimeout(() => {
+      let count = document.querySelector(".timer-count");
+      count.classList.add("hide");
+      setIsAnimationComplete(true);
+    }, 20000);
   };
 
   useEffect(() => {
@@ -83,7 +85,7 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
       count.classList.add("hide");
     }, 20000);
   }, [isBreatheActive]);
-
+  //
   useEffect(() => {
     // +++++++++++++++++++++++++++++++++++++ CONTINUE HERE!!!
     // WORKS FOR 3 ROUNDS, yet still keeps going, starting at 8. Find a way to stop at the last cycle, so that the countdown from 8 will stop at 0
@@ -131,9 +133,12 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
 
         {/* <img src={songoku} alt="" className="goku-hero" /> */}
         <div className="breathing-circle-container">
-          <div
-            className={isBreatheActive ? "breathing-circle" : "static-circle"}
-          ></div>
+          {!isAnimationComplete && (
+            <div
+              className={isBreatheActive ? "breathing-circle" : "static-circle"}
+            ></div>
+          )}
+          {isAnimationComplete && <div className="post-circle"></div>}
           {!isBreatheActive && (
             <button className="breathe-btn" onClick={breathe}>
               Breathe
@@ -146,7 +151,7 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
               <p className="breathe-exhale hide">EXHALE</p>
             </span>
           )}
-          <p className="timer-count">{isBreatheActive && timerCount}</p>
+          {isBreatheActive && <p className="timer-count">{timerCount}</p>}
         </div>
         {/* {`${Goku}`} */}
         {/* <img
