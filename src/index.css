@@ -148,7 +148,8 @@ h1.with-shadow {
   translate: all 1s;
 }
 
-.smile-circle:hover {
+/* .smile-circle:hover, */
+.smile-circle:active {
   width: 100px;
   height: 46px;
   /* padding: 10px; */
