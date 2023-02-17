@@ -24,7 +24,9 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
       let count = document.querySelector(".timer-count");
       count.classList.add("hide");
       setIsAnimationComplete(true);
-      setHasBeenVisited(sessionStorage.setItem("hasBeenVisited", true));
+      setHasBeenVisited(true);
+      // setHasBeenVisited(sessionStorage.setItem("hasBeenVisited", true));
+      sessionStorage.setItem("hasBeenVisited", true);
     }, 20000);
   };
 
@@ -88,16 +90,12 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
 
         <div className="breathing-circle-container">
           {!isAnimationComplete && !hasBeenVisited && (
-            <div
+            <button
               className={isBreatheActive ? "breathing-circle" : "static-circle"}
-            ></div>
+              onClick={breathe}
+            ></button>
           )}
 
-          {!isBreatheActive && !hasBeenVisited && (
-            <button className="breathe-btn" onClick={breathe}>
-              Breathe
-            </button>
-          )}
           {isBreatheActive && (
             <span className="breathe-text">
               <p className="breathe-inhale">INHALE</p>
@@ -106,12 +104,11 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
             </span>
           )}
           {isBreatheActive && <p className="timer-count">{timerCount}</p>}
-          {isAnimationComplete ||
-            (hasBeenVisited && (
-              <div className="post-circle">
-                <div className="smile-circle"></div>
-              </div>
-            ))}
+          {(isAnimationComplete || hasBeenVisited) && (
+            <div className="post-circle">
+              <div className="smile-circle"></div>
+            </div>
+          )}
         </div>
       </div>
     </main>

@@ -61,7 +61,6 @@ export const Projects = ({
             <p className="project-description">{repo.description}</p>
           </span>
           <div className="project-thumbnail-div">
-            {/* <img src={repo.img} alt="logo"></img> */}
             {repo.type === "anime" ? (
               <GiSpellBook size={isTablet || isDesktop ? 100 : 50} />
             ) : (

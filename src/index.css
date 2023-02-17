@@ -105,23 +105,22 @@ h1.with-shadow {
 }
 
 .post-circle {
-  opacity: 100%;
+  animation: fadeIn 2s;
 }
 
 .smile-circle {
   width: 100px;
   height: 76px;
-  border-bottom: solid black 1px;
+  border-bottom: solid #132743 1px;
   margin-top: 30px;
   border-radius: 50%;
   margin-left: 35px;
-  translate: all 1s;
+  animation: fadeIn 3s;
 }
 
 .smile-circle:active {
   width: 100px;
   height: 46px;
-  border-bottom: solid black 1px;
 }
 
 .breathe-text,
@@ -285,6 +284,16 @@ h1.with-shadow {
     );
     box-shadow: 0 0 3px rgba(225, 249, 167, 0.884);
     opacity: 30%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
   }
 }
 

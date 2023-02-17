@@ -4,7 +4,6 @@
   background-color: antiquewhite;
   background: transparent;
   background-color: #8e8974;
-
   z-index: 99;
 
   color: #e3e3e3;
@@ -41,6 +40,8 @@
   background-color: transparent;
   color: white;
 }
+
+/* tablet & desktop */
 
 @media only screen and (min-width: 767px) {
   .nav-desktop-btn {

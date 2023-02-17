@@ -54,7 +54,7 @@
   font-size: 1.2rem;
 }
 
-/* tablet style */
+/* tablet & desktop */
 @media only screen and (min-width: 767px) {
   .h1-projects {
     font-size: 6rem;
