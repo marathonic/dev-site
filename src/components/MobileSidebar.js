@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-// import "../yorha.css";
+import React, { useEffect } from "react";
 import "../styles/mobileSidebar.css";
 
 export const MobileSidebar = ({
   isSidebarOpen,
-  handleSidebarToggle,
   setIsSidebarOpen,
   currentScroll,
   setCurrentScroll,
@@ -24,45 +22,11 @@ export const MobileSidebar = ({
     return;
   };
 
-  const handleHome = (e) => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    closeWithDelay(e);
-  };
-
-  // we could also create a const scrollToSection = (e) => {
-  // let sectionClicked = e.target.id.substring(3).toLowerCase();
-  // switch (sectionClicked) {
-  // case 'projects':
-  //
-  // break;
-  //
-  // default:
-  // break;
-  // }
-  // ++++++ OR, alternatively:
-  // just give the container elements ids that are the same as the sb-link button names,
-  //  so the container of the projects section would be: #proj-id, and the button's in the sidebar would be #sb-proj;
-  //  WE WANT TO REMOVE THE LAST 3 CHARACTERS FROM THE RIGHT, WHICH ARE ALWAYS "-id", is substring the right way?
-  // let btnClicked = e.target.id;
-  // let nameOfDOMSection = e.target.id <this gives us the button id, we'll get the section's id like so...: > .substring(3).toLowerCase();
-  //  let sectionElement = document.querySelector(#`${nameOfDOMSection}`);
-  //  sectionElement?.scrollIntoView({block: "center", behavior: "smooth"});
-  // closeWithDelay(e);
-  // }
-
-  const handleProjects = (e) => {
-    let projectsSection = document.querySelector("#projects-id");
-    projectsSection?.scrollIntoView({ block: "center", behavior: "smooth" });
-    closeWithDelay(e);
-  };
-
-  // ---------------++++++++++++++++++++++++++++++++++++++ should we delete this useEffect? Try both ways
   useEffect(() => {
     setCurrentScroll("home");
     // eslint-disable-next-line
   }, []);
 
-  // uhhhhhh what? the console says the current scroll is home, and then it says it's proj
   console.log(currentScroll);
 
   return (

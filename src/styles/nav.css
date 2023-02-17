@@ -3,14 +3,10 @@
   top: 0;
   background-color: antiquewhite;
   background: transparent;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-color: rgba(77, 73, 62, 0.2);
   background-color: #8e8974;
-  /* background-color: var(--darkText); */
 
   z-index: 99;
 
-  color: white;
   color: #e3e3e3;
   font-size: 1.2rem;
   padding-block: clamp(30px, 20px, 42px);
@@ -31,11 +27,9 @@
 .menu-btn {
   background-color: transparent;
   border: transparent;
-  color: var(--darkText);
   color: white;
   padding-right: 16px;
   font-size: clamp(26px, 32px, 42px);
-  /* float: right; */
   position: absolute;
   top: 0;
   right: 0;

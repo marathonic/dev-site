@@ -1,7 +1,5 @@
 .about-container {
-  background-color: black;
   background-color: #8e8974;
-  /* background-color: #4d493e; */
   color: white;
   min-height: 20em;
   height: 20em;
@@ -16,8 +14,6 @@
 }
 
 .h1-section.h1-about {
-  color: purple;
-  color: cyan;
   color: white;
   text-align: center;
 }
@@ -47,7 +43,6 @@
   }
 
   .h1-section.h1-about {
-    font-size: 4.6rem;
     font-size: 6rem;
   }
 

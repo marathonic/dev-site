@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/projects.css";
 import { useInView } from "react-intersection-observer";
-import {
-  GiBroadsword,
-  GiSpellBook,
-  GiMagnifyingGlass,
-  GiShoppingCart,
-} from "react-icons/gi";
+import { GiSpellBook, GiMagnifyingGlass, GiShoppingCart } from "react-icons/gi";
 
 export const Projects = ({
   isTablet,
@@ -14,8 +9,6 @@ export const Projects = ({
   setCurrentScroll,
   currentScroll,
 }) => {
-  // ++++++++++++ EXCELLENT!!! This works, now just implement the same logic for the other sections
-
   const [projectsRef, projectsInView] = useInView({
     triggerOnce: false,
     threshold: 0.9,
@@ -31,7 +24,7 @@ export const Projects = ({
   const repos = [
     {
       title: "myAnimeLog",
-      // img: "/myAnimeLogScreenshot.png",
+      img: "src",
       type: "anime",
       description: "I made this to keep track of my anime",
       link: "https://myanimelog.vercel.app/",

@@ -25,7 +25,7 @@ function App() {
     setTimeout(() => {
       let nameOfDOMSection = e.target.id.substring(3).toLowerCase();
       console.log("NAME OF DOM SECTION", "==>", nameOfDOMSection);
-      // we want home to scroll to the very top of the viewport, not just center of the component
+      // home scrolls to the very top of the viewport, not just center of the component
       if (nameOfDOMSection === "home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
         cb(e);
@@ -75,7 +75,6 @@ function App() {
         setCurrentScroll={setCurrentScroll}
         scrollToSection={scrollToSection}
       />
-      {/* {isSidebarOpen && <MobileSidebar />} */}
       <header className="App-header"></header>
       <Hero setCurrentScroll={setCurrentScroll} currentScroll={currentScroll} />
       <Projects
