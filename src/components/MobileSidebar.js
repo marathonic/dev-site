@@ -13,7 +13,6 @@ export const MobileSidebar = ({
     let clicked = targ.substring(3);
 
     if (clicked === currentScroll) return;
-    console.log(clicked);
 
     setTimeout(() => {
       setIsSidebarOpen(false);
@@ -26,8 +25,6 @@ export const MobileSidebar = ({
     setCurrentScroll("home");
     // eslint-disable-next-line
   }, []);
-
-  console.log(currentScroll);
 
   return (
     <>

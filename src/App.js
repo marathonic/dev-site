@@ -24,7 +24,6 @@ function App() {
   const scrollToSection = (e, cb) => {
     setTimeout(() => {
       let nameOfDOMSection = e.target.id.substring(3).toLowerCase();
-      console.log("NAME OF DOM SECTION", "==>", nameOfDOMSection);
       // home scrolls to the very top of the viewport, not just center of the component
       if (nameOfDOMSection === "home") {
         window.scrollTo({ top: 0, behavior: "smooth" });

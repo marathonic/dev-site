@@ -8,13 +8,7 @@ import {
 } from "react-icons/io5";
 import { useInView } from "react-intersection-observer";
 
-function About({
-  isTablet,
-  isDesktop,
-  dynIconSize,
-  setCurrentScroll,
-  currentScroll,
-}) {
+function About({ dynIconSize, setCurrentScroll, currentScroll }) {
   const [aboutRef, aboutInView] = useInView({
     triggerOnce: false,
     threshold: 0.9,

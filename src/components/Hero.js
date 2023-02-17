@@ -63,7 +63,6 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
     if (timerThirdRound && timerCount === 0 && timerCountActive) {
       setTimerCount(8);
       setTimerCountActive(false);
-      console.log("set timer count to false");
     }
 
     timerCount > 0 && setTimeout(() => setTimerCount(timerCount - 1), 1000);

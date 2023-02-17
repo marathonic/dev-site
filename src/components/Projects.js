@@ -19,6 +19,7 @@ export const Projects = ({
     if (projectsInView) {
       setCurrentScroll("proj");
     }
+    // eslint-disable-next-line
   }, [projectsInView]);
 
   const repos = [
