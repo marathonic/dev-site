@@ -8,17 +8,12 @@ function Contact({ dynIconSize, setCurrentScroll, currentScroll }) {
     triggerOnce: false,
     threshold: 0.9,
   });
-  // console.log(contactInView);
-
-  // debounce scroll listener?
 
   useEffect(() => {
     if (currentScroll === "contact") return;
     if (contactInView) {
       setCurrentScroll("contact");
     }
-    // let contactBtn = document.querySelector('#sb-contact')
-    // contactBtn.classList.add('current-link')
     // eslint-disable-next-line
   }, [contactInView]);
 

@@ -1,20 +1,12 @@
 button.sb-contact-box {
   appearance: none;
   border: transparent;
-  /* background-color: rgb(201, 162, 111); */
   display: flex;
   justify-content: space-evenly;
   font-size: 1.6rem;
 }
 
-/* button from yorha.css */
-
 .side-btn.current-link {
-  border-top: solid #c8c2aa 2px;
-  border-bottom: solid #c8c2aa 2px;
-
-  background-color: #dcd8c0;
-  color: #454138;
   padding: 0.5rem;
   font-size: 1em;
   border: none;
@@ -23,9 +15,6 @@ button.sb-contact-box {
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  background-color: #bab5a1;
-  /* background-color: transparent; */
-  /* color: inherit; */
   font-family: inherit;
   letter-spacing: inherit;
   font-weight: inherit;
@@ -48,8 +37,6 @@ button.sb-contact-box {
 }
 
 .side-btn:not(.current-link) {
-  /* appearance: none; */
-
   padding: 0.5rem;
   font-size: 1em;
   border: none;
@@ -58,7 +45,6 @@ button.sb-contact-box {
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  background-color: #bab5a1;
   background-color: transparent;
   color: inherit;
   font-family: inherit;
@@ -75,11 +61,7 @@ button.sb-contact-box {
   text-align: right;
   -webkit-tap-highlight-color: transparent;
 }
-.side-btn:not(.current-link):hover,
-.side-btn:hover {
-  /* -webkit-box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1; */
-  /* box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1; */
-}
+
 .side-btn:not(.current-link):before {
   content: "";
   -webkit-transition: all 0.16s;
@@ -95,8 +77,11 @@ button.sb-contact-box {
   margin-right: 9px;
   opacity: 80%;
 }
+
+/* the fill-in transition for the sidebar buttons was 
+initially inspired by the yorha.css buttons by MetaKirby: https://github.com/metakirby5/yorha */
+
 .side-btn:not(.current-link):after {
-  content: "❖";
   content: "";
   -webkit-transition: all 0.16s;
   -moz-transition: all 0.16s;
@@ -136,11 +121,8 @@ button.sb-contact-box {
   background-color: #dcd8c0;
 }
 
-/* button section end */
-
 .sidebar {
   background-color: rgba(245, 246, 219, 0.9);
-  /* color: black; */
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -149,7 +131,6 @@ button.sb-contact-box {
   height: 100%;
   width: 100%;
   max-height: 100%;
-  /* overflow: hidden; */
 }
 
 .sidebar-container {
@@ -167,24 +148,14 @@ button.sb-contact-box {
 
 .fade-out {
   animation: fadeOut 1s;
-  /* animation-fill-mode: forwards; */
 }
 
 .sidebar-ul {
-  /* position: absolute;
-  right: 0;
-  top: 0; */
   margin-top: 20%;
-  /* padding-right: 30px; */
   list-style: none;
   font-size: 1.6rem;
   text-align: end;
   margin-right: 20px;
-}
-
-.side-btn {
-  /* transition: all 0.5s; */
-  /* margin-right: 30px; */
 }
 
 .side-btn:not(.current-link):hover {
@@ -192,46 +163,15 @@ button.sb-contact-box {
   color: #dcd8c0;
   box-shadow: 0.1em 0.1em 0.1em 0 #bab5a1;
   padding-right: 20px;
-  /* background: none; */
   animation: alternate 0.5s ease blink;
 }
 
 .test-border {
-  padding-bottom: 19px;
   padding-block: 10px;
 }
 
 .test-border-inner {
   padding-block: 2px;
-}
-
-.test-border-inner:hover:not(.current-link),
-.test-border-inner:active:not(.current-link) {
-  /* padding: 3px; */
-  /* padding-top: 2px; */
-  /* border-top: solid 1px #454138; */
-  /* padding-bottom: 2px; */
-  /* border-bottom: solid 1px #454138; */
-  /* outline: 1px #454138 inset; */
-  /* outline-offset: 2px; */
-}
-
-.side-btn.test {
-  /* ---test--- */
-  /* border: 3px solid #454138; */
-  /* content: ""; */
-  /* display: block; */
-  /* position: absolute; */
-  /* top: 5px; */
-  /* left: 2px; */
-  /* right: 2px; */
-  /* bottom: 5px; */
-  /* pointer-events: none; */
-  /* outline */
-  /* outline-offset: 2px; */
-  /* outline-width: 1px; */
-  /* outline-color: #454138; */
-  /* outline-style: inset; */
 }
 
 .sidebar-contact {
@@ -242,7 +182,6 @@ button.sb-contact-box {
   margin-top: 50%;
 }
 
-/* .side-btn.current-link, */
 .sidebar-contact {
   border-top: solid #c8c2aa 2px;
   border-bottom: solid #c8c2aa 2px;
@@ -251,23 +190,12 @@ button.sb-contact-box {
   color: #454138;
 }
 
-.side-btn.current-link::before {
-}
-
 .sb-contact-box {
   width: 100%;
   text-align: center;
   background-color: rgba(200, 194, 170, 0.2);
-  /* background-size: 4px 4px; */
   box-shadow: 0;
   transition: all 0.3s;
-  /* background-image: linear-gradient( */
-  /* 90deg, */
-  /* transparent, */
-  /* transparent 3px, */
-  /* rgba(0, 0, 0, 0.07) 4px */
-  /* ), */
-  /* linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px); */
 }
 
 .sb-contact-box:active {
@@ -278,26 +206,6 @@ button.sb-contact-box {
 
 .sb-contact-box:first-of-type {
   border-right: solid 2px #c8c2aa;
-}
-
-.current-link {
-  /* background: #c8c2aa; */
-
-  /* background-image: linear-gradient( */
-  /* 90deg, */
-  /* rgba(#4d493e, 0.2), */
-  /* rgba(#4d493e, 0.2) 14px, */
-  /* transparent 14px, */
-  /* transparent 20px, */
-  /* rgba(#4d493e, 0.2) 20px, */
-  /* rgba(#4d493e, 0.2) 23px, */
-  /* transparent 23px */
-  /* ); */
-}
-
-.testing-shit {
-  /* background-color: yellow; */
-  /* font-size: 4rem; */
 }
 
 @keyframes fadeIn {
@@ -368,19 +276,11 @@ button.sb-contact-box {
     -ms-transition: all 0.16s;
     transition: all 0.16s;
     position: absolute;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */
-    /* right: 0; */
-    /* margin-bottom: -33%; */
-    /* margin-right: 9px; */
-    /* margin */
     opacity: 80%;
-    /* width: 100%; */
   }
+  /* tablet view gets an icon to decorate empty space */
   .selection-icon:not(.current-link):after {
     content: "❖";
-    /* content: ""; */
     -webkit-transition: all 0.16s;
     -moz-transition: all 0.16s;
     -o-transition: all 0.16s;
@@ -391,14 +291,10 @@ button.sb-contact-box {
     -o-transition-timing-function: ease-out;
     -ms-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-    /* width: 100%; */
     position: absolute;
-    /* top: 0; */
-    /* bottom: 0; */
     left: 0;
     margin-left: 606px;
     margin-top: 7px;
-    /* width: 0; */
     background-color: transparent;
     z-index: -1;
   }
@@ -407,7 +303,6 @@ button.sb-contact-box {
     color: #dcd8c0;
   }
 
-  /* --- */
   .side-btn.current-link:before {
     content: "";
     content: "❖";
@@ -418,15 +313,7 @@ button.sb-contact-box {
     -ms-transition: all 0.16s;
     transition: all 0.16s;
     position: absolute;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */
-    /* right: 0; */
-    /* margin-bottom: -33%; */
-    /* margin-right: 9px; */
-    /* margin */
     opacity: 80%;
-    /* width: 100%; */
   }
   .selection-icon.current-link:after {
     content: "❖";
@@ -441,14 +328,10 @@ button.sb-contact-box {
     -o-transition-timing-function: ease-out;
     -ms-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-    /* width: 100%; */
     position: absolute;
-    /* top: 0; */
-    /* bottom: 0; */
     left: 0;
     margin-left: 606px;
     margin-top: 7px;
-    /* width: 0; */
     background-color: transparent;
     z-index: -1;
   }

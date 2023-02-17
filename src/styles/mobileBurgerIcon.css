@@ -1,12 +1,10 @@
 .burger-container {
   background-color: transparent;
-  /* appearance: none; */
   border: none;
   width: 40px;
   position: absolute;
   top: 0;
   right: 0;
-  /* height: max-content; */
 }
 
 .burger-line {
@@ -24,22 +22,12 @@
   animation: taro ease 1s;
 }
 
-/* .line1.open { */
-/* animation: taro; */
-/* } */
-
-/* copy from codepen */
-
 #nav-icon4 {
   width: max-content;
   max-width: 30px;
   height: 45px;
-  /* we want the lines closer together */
-  /* is there a block-margin or something that's making them be apart from each other? */
-  /* max-height: 30px; */
   margin-left: -5px;
   position: relative;
-  /* margin: 50px auto; */
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -55,9 +43,6 @@
   display: block;
   position: absolute;
   height: 2px;
-  /* THIS MAKES IT LOOK LIKE A CHEVRON */
-  width: 23px;
-  /* We probably want to stick with the X though? */
   width: 42px;
   background: #d3531a;
   background: white;
@@ -72,11 +57,6 @@
   -moz-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-}
-
-/* Icon 4 */
-
-#nav-icon4 {
 }
 
 #nav-icon4 span:nth-child(1) {
@@ -114,12 +94,6 @@
 }
 
 #nav-icon4.open span:nth-child(2) {
-  /* standard version hides second line */
-  /* 
-  width: 0%;
-  opacity: 0;
-  */
-  /* our version */
   transform: translateY(15px);
   opacity: 0.6;
 }
