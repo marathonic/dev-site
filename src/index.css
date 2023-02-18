@@ -96,6 +96,7 @@ h1.with-shadow {
 }
 
 .static-circle {
+  cursor: pointer;
   animation: glow 5s alternate infinite;
 }
 
@@ -123,8 +124,7 @@ h1.with-shadow {
   height: 46px;
 }
 
-.breathe-text,
-.breathe-btn {
+.breathe-text {
   font-size: 1rem;
   position: absolute;
   margin-top: -80%;
@@ -189,8 +189,8 @@ h1.with-shadow {
 
 @keyframes breathe478 {
   0% {
-    width: 170px;
-    height: 33px;
+    width: 50%;
+    height: 33%;
     background: linear-gradient(
       325deg,
       rgba(240, 236, 216, 1) 0%,
@@ -202,8 +202,8 @@ h1.with-shadow {
   }
 
   21% {
-    width: 409px;
-    height: 169px;
+    width: 80%;
+    height: 50%;
     background: rgb(240, 236, 216);
     background: linear-gradient(
       325deg,
@@ -217,8 +217,8 @@ h1.with-shadow {
   }
 
   57% {
-    width: 409px;
-    height: 169px;
+    width: 80%;
+    height: 50%;
     opacity: 100%;
   }
 
@@ -243,8 +243,8 @@ h1.with-shadow {
     );
     box-shadow: none;
     opacity: 10%;
-    width: 170px;
-    height: 33px;
+    width: 50%;
+    height: 33%;
   }
 
   100% {
@@ -314,7 +314,92 @@ h1.with-shadow {
     margin-bottom: 33%;
   }
 
+  .breathing-circle,
+  .static-circle,
+  .post-circle {
+    color: black;
+    width: 170px;
+    height: 33px;
+    border-radius: 50%;
+    border: dashed 1px #132743;
+    margin-bottom: 100%;
+  }
+
+  @keyframes breathe478 {
+    0% {
+      width: 170px;
+      height: 33px;
+      background: linear-gradient(
+        325deg,
+        rgba(240, 236, 216, 1) 0%,
+        rgba(249, 249, 249, 1) 100%
+      );
+
+      box-shadow: 0 0 3px rgba(225, 249, 167, 0.884);
+      opacity: 30%;
+    }
+
+    21% {
+      width: 409px;
+      height: 219px;
+      background: rgb(240, 236, 216);
+      background: linear-gradient(
+        325deg,
+        rgba(240, 236, 216, 1) 0%,
+        rgba(249, 249, 249, 1) 100%
+      );
+
+      box-shadow: 0 31px 61px rgba(251, 237, 107, 1);
+      border: solid yellow 2px;
+      opacity: 100%;
+    }
+
+    57% {
+      width: 409px;
+      height: 169px;
+      opacity: 100%;
+    }
+
+    75% {
+      opacity: 70%;
+    }
+
+    80% {
+      opacity: 50%;
+    }
+
+    90% {
+      opacity: 20%;
+    }
+
+    97% {
+      background: rgb(240, 236, 216);
+      background: linear-gradient(
+        325deg,
+        rgba(240, 236, 216, 1) 0%,
+        rgba(249, 249, 249, 1) 100%
+      );
+      box-shadow: none;
+      opacity: 10%;
+      width: 170px;
+      height: 33px;
+    }
+
+    100% {
+      background: transparent;
+      opacity: 100%;
+    }
+  }
+
+  .breathe-text {
+    font-size: 1rem;
+    position: absolute;
+    margin-top: -50%;
+    opacity: 100%;
+    transition: all 8s;
+  }
+
   .breathing-circle {
-    margin-top: 33%;
+    /* margin-top: 33%; */
   }
 }
