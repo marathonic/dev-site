@@ -70,6 +70,7 @@ h1.with-shadow {
 .goku-hero,
 .breathing-circle,
 .static-circle,
+.static-post-circle,
 .post-circle {
   max-width: 300px;
   padding-bottom: 42%;
@@ -86,6 +87,7 @@ h1.with-shadow {
 
 .breathing-circle,
 .static-circle,
+.static-post-circle,
 .post-circle {
   color: black;
   width: 170px;
@@ -100,12 +102,17 @@ h1.with-shadow {
   animation: glow 5s alternate infinite;
 }
 
+.static-post-circle {
+  animation: fadeIn ease 1s;
+}
+
 .breathing-circle {
   animation: breathe478 ease-in-out infinite 21s;
   animation-iteration-count: 1;
 }
 
 .post-circle {
+  z-index: 3;
   animation: fadeIn 2s;
 }
 
@@ -170,6 +177,12 @@ h1.with-shadow {
   margin-bottom: 0;
 }
 
+.timer-count {
+  margin-top: 60%;
+  font-size: 1.6rem;
+  color: var(--darkText);
+}
+
 @keyframes breathe {
   0% {
     width: 170px;
@@ -189,8 +202,8 @@ h1.with-shadow {
 
 @keyframes breathe478 {
   0% {
-    width: 50%;
-    height: 33%;
+    width: 170px;
+    height: 33px;
     background: linear-gradient(
       325deg,
       rgba(240, 236, 216, 1) 0%,
@@ -243,8 +256,8 @@ h1.with-shadow {
     );
     box-shadow: none;
     opacity: 10%;
-    width: 50%;
-    height: 33%;
+    width: 170px;
+    height: 33px;
   }
 
   100% {
@@ -316,6 +329,7 @@ h1.with-shadow {
 
   .breathing-circle,
   .static-circle,
+  .static-post-circle,
   .post-circle {
     color: black;
     width: 170px;
@@ -323,6 +337,11 @@ h1.with-shadow {
     border-radius: 50%;
     border: dashed 1px #132743;
     margin-bottom: 100%;
+  }
+
+  .breathing-circle {
+    animation: breathe478 ease-in-out infinite 21s;
+    animation-iteration-count: 1;
   }
 
   @keyframes breathe478 {

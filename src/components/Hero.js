@@ -93,7 +93,9 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
             <button
               className={isBreatheActive ? "breathing-circle" : "static-circle"}
               onClick={breathe}
-            ></button>
+            >
+              {isBreatheActive && <p className="timer-count">{timerCount}</p>}
+            </button>
           )}
 
           {isBreatheActive && (
@@ -103,9 +105,8 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
               <p className="breathe-exhale hide">EXHALE</p>
             </span>
           )}
-          {isBreatheActive && <p className="timer-count">{timerCount}</p>}
           {(isAnimationComplete || hasBeenVisited) && (
-            <div className="post-circle">
+            <div className="static-post-circle">
               <div className="smile-circle"></div>
             </div>
           )}
