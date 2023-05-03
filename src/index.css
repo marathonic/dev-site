@@ -127,9 +127,13 @@ h1.with-shadow {
 .breathe-btn {
   font-size: 1rem;
   position: absolute;
-  margin-top: -80%;
+  margin-top: 80%;
   opacity: 100%;
   transition: all 8s;
+}
+
+.breathe-text {
+  margin-top: -200px;
 }
 
 .breathe-text:hover {
@@ -153,7 +157,7 @@ h1.with-shadow {
   color: var(--darkText);
   font-size: 8rem;
   font-weight: lighter;
-  margin-bottom: 20%;
+  /* margin-bottom: 20%; */
 }
 
 .h1-categ {
@@ -168,6 +172,11 @@ h1.with-shadow {
   text-transform: uppercase;
   font-weight: lighter;
   margin-bottom: 0;
+}
+
+.timer-count {
+  position: absolute;
+  margin-top: -390px;
 }
 
 @keyframes breathe {
@@ -311,10 +320,10 @@ h1.with-shadow {
 
   .hero-h1 {
     font-size: 10rem;
-    margin-bottom: 33%;
+    /* margin-bottom: 33%; */
   }
 
   .breathing-circle {
-    margin-top: 33%;
+    /* margin-top: 33%; */
   }
 }

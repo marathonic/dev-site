@@ -10,7 +10,9 @@ const Hero = ({ currentScroll, setCurrentScroll }) => {
   const [hasBeenVisited, setHasBeenVisited] = useState(() => {
     const visitStatus = sessionStorage.getItem("hasBeenVisited");
     const visitedVal = JSON.parse(visitStatus);
+    return false; // <-- FOR TESTING ONLY, REMOVE FOR PROD!
     return visitedVal || false;
+    
   });
   const [homeRef, homeInView] = useInView({
     triggerOnce: false,
