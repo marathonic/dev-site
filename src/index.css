@@ -133,7 +133,8 @@ h1.with-shadow {
 }
 
 .breathe-text {
-  margin-top: -200px;
+
+  margin-top: -65%;
 }
 
 .breathe-text:hover {
@@ -177,6 +178,7 @@ h1.with-shadow {
 .timer-count {
   position: absolute;
   margin-top: -390px;
+  /* margin-top: -60%; */
 }
 
 @keyframes breathe {
@@ -321,6 +323,10 @@ h1.with-shadow {
   .hero-h1 {
     font-size: 10rem;
     /* margin-bottom: 33%; */
+  }
+
+  .breathe-text {
+    margin-top: -300px;
   }
 
   .breathing-circle {
