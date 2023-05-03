@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dev-site/static/css/main.e8c8964f.css",
+    "main.js": "/dev-site/static/js/main.01da2702.js",
+    "static/media/Quicksand-VariableFont_wght.ttf": "/dev-site/static/media/Quicksand-VariableFont_wght.cf52df73d8529b4815ed.ttf",
+    "index.html": "/dev-site/index.html",
+    "main.e8c8964f.css.map": "/dev-site/static/css/main.e8c8964f.css.map",
+    "main.01da2702.js.map": "/dev-site/static/js/main.01da2702.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8c8964f.css",
+    "static/js/main.01da2702.js"
+  ]
+}
